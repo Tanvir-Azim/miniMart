@@ -37,6 +37,7 @@ import ContactPage1 from "./Components/Contact/ContactPage1"
 import ContactPage2 from "./Components/Contact/ContactPage2"
 import Search from "./Search"
 import ProfilePage from "./Components/ProfilePage"
+//import Footer from "./Components/Footer"
 
 
 function App() {
@@ -91,6 +92,7 @@ function App() {
         
           
       </Routes>
+    
     </BrowserRouter>
     </>
   )

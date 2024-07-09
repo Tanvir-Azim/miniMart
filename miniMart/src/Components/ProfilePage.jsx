@@ -40,6 +40,7 @@ function ProfilePage({getData}) {
     height: 80vh;
     animation-name:identifier;
     animation-duration:0.5s;
+    z-index: 20;
     
   }
   @media only screen and (max-width: 450px){

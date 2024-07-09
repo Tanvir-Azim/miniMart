@@ -67,6 +67,29 @@ function Header() {
 
   `
 
+const ProductMenus = styled.section`
+li{
+  
+}
+li ul{
+  visibility: hidden;
+  transition:all .4s ease;
+  top:45px;
+  
+  
+ 
+}
+li:hover ul{
+visibility:visible;
+cursor: pointer;
+
+
+
+
+}
+
+`
+
 
   
 
@@ -77,7 +100,7 @@ function Header() {
   return (
     <>
     
-        <div className=' w-[100%]  bg-red-300 h-16 flex justify-between items-center mini:w-[360px]'>
+        <div className=' w-[100%] h-16 flex justify-between items-center mini:w-[360px]'>
         
 
             <div className=' w-[300px] grid place-items-center lg:w-[200px] xs:w-[200px]'>
@@ -85,7 +108,7 @@ function Header() {
                   <h3 className=' text-3xl  font-bold'>mini<span className=' text-red-500'>Mart</span></h3>
                 </NavLink>
             </div>
-            <div className='  flex mr-10 '>
+            <div className='  flex mr-10  z-30'>
                 <div className='flex space-x-12   font-light text-md tracking-[2px] xs:hidden sm:hidden md:hidden  lg:space-x-5 '>
                   <ul className=' flex space-x-14  font-light text-md tracking-[2px] xs:hidden sm:hidden md:hidden  lg:space-x-5  items-center'>
 
@@ -166,7 +189,7 @@ function Header() {
                           <div className=''>
                           <ProductMenu>
                             <li><NavLink  to='/pages' className='relative'>PAGES </NavLink>
-                            <ul className=' w-[1300px] h-[450px] bg-red-300 absolute  left-[150px] mt-5'><PageContent/></ul>
+                            <ul className=' w-[1300px] h-[450px] bg-gray-300 absolute  left-[150px] mt-5'><PageContent/></ul>
 
                           </li>
                           </ProductMenu>
@@ -176,7 +199,7 @@ function Header() {
                       </div>
                       <NavLink  to='/about'>ABOUT</NavLink>
 
-                      <ProductMenu>
+                      <ProductMenus>
                         <li className=' relative'><NavLink  to='/contact'>CONTACT</NavLink>
                             <ul className= ' bg-white  absolute w-32  top-11  right-[-20px] tracking-tight text-gray-500 '>
 
@@ -186,7 +209,7 @@ function Header() {
                               <hr/>
                           </ul>
                       </li>
-                      </ProductMenu>
+                      </ProductMenus>
                   </ul>
                 </div>
 

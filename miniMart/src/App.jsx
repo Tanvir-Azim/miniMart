@@ -1,7 +1,7 @@
 import React from "react"
 import Home from "./Components/HomePages/Home"
 //import Product from '../src/components/productPages/Product'
-import { BrowserRouter,Routes,Route } from "react-router-dom"
+
 import About from "./About"
 import Pages from "./Components/Pages/Pages"
 import Blog from "./Components/Blog/Blog"
@@ -9,7 +9,7 @@ import Contact from "./Components/Contact/Contact"
 import Cart from "./Components/Cart"
 import Header from "./Components/Header"
 import Product from "./Components/ProductPages/Product"
-
+import { BrowserRouter,Routes,Route, RouterProvider, NavLink } from "react-router-dom"
 import Heart from "./Heart"
 import HomePage1 from "./Components/HomePages/HomePage1"
 import HomePage2 from "./Components/HomePages/HomePage2"
@@ -81,18 +81,8 @@ function App() {
         <Route path="/heart" element={<Heart/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/search" element={<Search/>}/>
-        <Route path="/profile" element={<ProfilePage/>}/>
-       
-
-       
-
-       
-      
-        
-        
-          
+        <Route path="/profile" element={<ProfilePage/>}/>    
       </Routes>
-    
     </BrowserRouter>
     </>
   )

@@ -1,0 +1,452 @@
+[
+    {
+        "id": "thapaserialnoa",
+        "name": "VASAGLE Small Coffee Table",
+        "price": 3000000,
+        "colors": [
+        "#ff0000",
+        "#000000",
+        "#CDD0D0"
+        ],
+        "image":"/images/HomePage1/h1feature1.jpg",
+        "description1": "The large coffee table measures 19.7”Dia. x 15.7”H and the small coffee table measures 15.7”Dia. x 14.2”H; the compact size suitable for small spaces allows you to find the right place for afternoon tea, decorations, or a laptop for work",
+        "description2":"The mix of quality particleboard and sturdy steel frame makes this side table set stable so that it won't wobble every time you pick up your coffee cup. Each small table can support up to 44 lb",
+        "featured":true,
+        "stock": 5,
+        "reviews": 58,
+        "stars": 4.8,
+        "like":20,
+        "comment":12,
+        "share":10,
+        "images":[
+            {
+                "id": "randomid1",
+                "width": 1080,
+                "height": 650,
+                "url":"/images/HomePage1/h1feature1.jpg",
+                "filename": "prod-2.png",
+                "size": 1080,
+                "type": "image/jpg"
+            },
+            {
+            "id": "randomid2",
+            "width": 1080,
+            "height": 650,
+            "url": "/images/HomePage1/h1featuremini1.jpg",
+            "filename": "prod-2.png",
+            "size": 1080,
+            "type": "image/jpg"
+            },
+            {
+            "id": "randomid3",
+            "width": 1080,
+            "height": 650,
+            "url": "/images/HomePage1/h1featuremini1.jpg",
+            "filename": "prod-3.png",
+            "size": 1080,
+            "type": "image/jpg"
+            },
+            {
+            "id": "randomid4",
+            "width": 1080,
+            "height": 650,
+            "url":"/images/HomePage1/h1featuremini2.jpg",
+            "filename": "prod-4.png",
+            "size": 1080,
+            "type": "image/jpg"
+            }
+        ]
+
+},
+
+    {
+        "id": "thapaserialnob",
+        "name": "Round Coffee Table",
+        "price": 500000,
+        "colors": [
+        "#000",
+        "#22D3EF"
+        ],
+        "description": "The mobile is compact with its 6.2-inch OLED screen and far lighter at 168g. It perfectly captures the design, looks, and feel of the expensive one. It comes with a snapdragon processor with a 5n chip in it. It has a 200mp camera in the rear 100mp in front perfect for selfie lovers. It also support HDR content means you can watch 4K content on it.",
+        "category": "Chair",
+        "shipping": true,
+        "featured":true,
+        "stock": 10,
+        "reviews": 28,
+        "stars": 4.4,
+        "images":[
+            {
+                "id": "randomid1",
+                "width": 1080,
+                "height": 650,
+                "url":"/images/HomePage1/h1feature2.jpg",
+                "filename": "prod-2.png",
+                "size": 1080,
+                "type": "image/jpg"
+            },
+            {
+            "id": "randomid2",
+            "width": 1080,
+            "height": 650,
+            "url": "/images/HomePage1/h1featuremini1.jpg",
+            "filename": "prod-2.png",
+            "size": 1080,
+            "type": "image/jpg"
+            },
+            {
+            "id": "randomid3",
+            "width": 1080,
+            "height": 650,
+            "url": "/images/HomePage1/h1featuremini2.jpg",
+            "filename": "prod-3.png",
+            "size": 1080,
+            "type": "image/jpg"
+            },
+            {
+            "id": "randomid4",
+            "width": 1080,
+            "height": 650,
+            "url":"/images/HomePage1/h1featuremini3.jpg",
+            "filename": "prod-4.png",
+            "size": 1080,
+            "type": "image/jpg"
+            }
+        ]
+
+
+    },
+    {
+        "id": "thapaserialnod",
+        "name": "Round Side Table",
+        "price": 12599,
+        "colors": [
+        "#000",
+        "#000000",
+        "#CDD0D0"
+        ],
+        "image": "/images/HomePage1/h1feature3.jpg",
+        "description":"Accent Coffee Table with Side Table: Elevate your home decor with our 2 Piece Round Side Table Coffee Table Accent Table Set. This set includes a large table providing you with versatile options to enhance your living room, bedroom, balcony, office, or any space in need of a stylish touch.",
+        "shipping": true,
+        "featured":true,
+        "images":[
+            {
+                "id": "randomid1",
+                "width": 1080,
+                "height": 650,
+                "url":"/images/HomePage1/h1feature3.jpg",
+                "filename": "prod-2.png",
+                "size": 1080,
+                "type": "image/jpg"
+            },
+            {
+            "id": "randomid2",
+            "width": 1080,
+            "height": 650,
+            "url": "/images/HomePage1/h1feature3mini1.jpg",
+            "filename": "prod-2.png",
+            "size": 1080,
+            "type": "image/jpg"
+            },
+            {
+            "id": "randomid3",
+            "width": 1080,
+            "height": 650,
+            "url": "/images/HomePage1/h1feature3mini2.jpg",
+            "filename": "prod-3.png",
+            "size": 1080,
+            "type": "image/jpg"
+            },
+            {
+            "id": "randomid4",
+            "width": 1080,
+            "height": 650,
+            "url":"/images/HomePage1/h1feature3mini3.jpg",
+            "filename": "prod-4.png",
+            "size": 1080,
+            "type": "image/jpg"
+            }
+        ]
+        },
+        {
+            "id": "thapaserialnoe",
+            "name": "Computer Desk ",
+            "company": "apple",
+            "price": 4000099,
+            "colors": [
+            "#000",
+            "#CDD0D0"
+            ],
+            "image": "/images/HomePage1/h1feature4.jpg",
+            "description": "【Diversified Scenarios】The office desk is designed with a modern simple style, suitable for different styles of scenes, such as living rooms, bedrooms, and offices. It is suitable for various users, such as children, teenagers, students, and teachers, serving as a study work desk.",
+            "category": "computer",
+            "shipping": true,
+            "featured":true,
+            "images":[
+                {
+                    "id": "randomid1",
+                    "width": 1080,
+                    "height": 650,
+                    "url":"/images/HomePage1/h1feature4.jpg",
+                    "filename": "prod-2.png",
+                    "size": 1080,
+                    "type": "image/jpg"
+                },
+                {
+                "id": "randomid2",
+                "width": 1080,
+                "height": 650,
+                "url": "/images/HomePage1/h1feature4mini1.jpg",
+                "filename": "prod-2.png",
+                "size": 1080,
+                "type": "image/jpg"
+                },
+                {
+                "id": "randomid3",
+                "width": 1080,
+                "height": 650,
+                "url": "/images/HomePage1/h1feature4mini2.jpg",
+                "filename": "prod-3.png",
+                "size": 1080,
+                "type": "image/jpg"
+                },
+                {
+                "id": "randomid4",
+                "width": 1080,
+                "height": 650,
+                "url":"/images/HomePage1/h1feature4mini3.jpg",
+                "filename": "prod-4.png",
+                "size": 1080,
+                "type": "image/jpg"
+                }
+            ]
+    
+            },
+            {
+                "id": "thapaserialnof",
+                "name": "Computer Desk",
+                "price": 42999,
+                "colors": [
+                "#000000",
+                "#CDD0D0"
+                ],
+                "image": "/images/HomePage1/h1feature5.jpg",
+                "description":"VERSATILE WORK DESK: Our computer desk is a perfect corporate or home-office desk and works in any contemporary or modern space. It features a spacious bottom shelf and keyboard tray and measures 29.5",
+                "category": "Desk",
+                "featured":true,
+                "shipping": true,
+                "images":[
+                    {
+                        "id": "randomid1",
+                        "width": 1080,
+                        "height": 650,
+                        "url":"/images/HomePage1/h1feature5.jpg",
+                        "filename": "prod-2.png",
+                        "size": 1080,
+                        "type": "image/jpg"
+                    },
+                    {
+                    "id": "randomid2",
+                    "width": 1080,
+                    "height": 650,
+                    "url": "/images/HomePage1/h1feature5mini1.jpg",
+                    "filename": "prod-2.png",
+                    "size": 1080,
+                    "type": "image/jpg"
+                    },
+                    {
+                    "id": "randomid3",
+                    "width": 1080,
+                    "height": 650,
+                    "url": "/images/HomePage1/h1feature5mini2.jpg",
+                    "filename": "prod-3.png",
+                    "size": 1080,
+                    "type": "image/jpg"
+                    },
+                    {
+                    "id": "randomid4",
+                    "width": 1080,
+                    "height": 650,
+                    "url":"/images/HomePage1/h1feature5mini3.jpg",
+                    "filename": "prod-4.png",
+                    "size": 1080,
+                    "type": "image/jpg"
+                    }
+                ]
+        
+            
+                    },
+                    {
+                        "id": "thapaserialnoh",
+                        "name": "Round Side End Table",
+                        "price": 1099999,
+                        "colors": [
+                        "#000",
+                        "#CDD0D0"
+                        ],
+                        "image":"/images/HomePage1/h1feature6.jpg",
+                        "description":"[Quick and Easy to Assemble] Thanks to the simple structure and clear instructions, this side table can be assembled in 5-10 minutes",
+                        "category": "Tab;e",
+                        "featured": true,
+                        "shipping": true,
+                        
+                        "images":[
+                            {
+                                "id": "randomid1",
+                                "width": 1080,
+                                "height": 650,
+                                "url":"/images/HomePage1/h1feature6.jpg",
+                                "filename": "prod-2.png",
+                                "size": 1080,
+                                "type": "image/jpg"
+                            },
+                        
+                            {
+                                "id": "randomid2",
+                                "width": 1080,
+                                "height": 650,
+                                "url":"/images/HomePage1/h1feature6mini1.jpg",
+                                "filename": "prod-2.png",
+                                "size": 1080,
+                                "type": "image/jpg"
+                            },
+                            {
+                            "id": "randomid3",
+                            "width": 1080,
+                            "height": 650,
+                            "url": "/images/HomePage1/h1feature6mini2.jpg",
+                            "filename": "prod-3.png",
+                            "size": 1080,
+                            "type": "image/jpg"
+                            },
+                            {
+                            "id": "randomid4",
+                            "width": 1080,
+                            "height": 650,
+                            "url":"/images/HomePage1/h1feature6mini3.jpg",
+                            "filename": "prod-4.png",
+                            "size": 1080,
+                            "type": "image/jpg"
+                            }
+                        ]
+                
+                        },
+                        {
+                            "id": "thapaserialnob",
+                            "name": "Round Side End Table",
+                            "price": 5000000,
+                            "colors": [
+                            "#000",
+                            "#22D3EF"
+                            ],
+                            "image": "/images/HomePage1/h1feature7.jpg",
+                            "category": "mobile",
+                            "shipping": true,
+                            "featured":true,
+                            "stock": 5,
+                                "reviews": 58,
+                                "stars": 4.8,
+                                "like":20,
+                                "comment":12,
+                                "share":10,
+                                "images":[
+                                    {
+                                        "id": "randomid1",
+                                        "width": 1080,
+                                        "height": 650,
+                                        "url":"/images/HomePage1/h1feature7.jpg",
+                                        "filename": "prod-2.png",
+                                        "size": 1080,
+                                        "type": "image/jpg"
+                                    },
+                                    {
+                                    "id": "randomid2",
+                                    "width": 1080,
+                                    "height": 650,
+                                    "url": "/images/HomePage1/h1feature7mini1.jpg",
+                                    "filename": "prod-2.png",
+                                    "size": 1080,
+                                    "type": "image/jpg"
+                                    },
+                                    {
+                                    "id": "randomid3",
+                                    "width": 1080,
+                                    "height": 650,
+                                    "url": "/images/HomePage1/h1feature7mini2.jpg",
+                                    "filename": "prod-3.png",
+                                    "size": 1080,
+                                    "type": "image/jpg"
+                                    },
+                                    {
+                                    "id": "randomid4",
+                                    "width": 1080,
+                                    "height": 650,
+                                    "url":"/images/HomePage1/h1feature7mini3.jpg",
+                                    "filename": "prod-4.png",
+                                    "size": 1080,
+                                    "type": "image/jpg"
+                                    }
+                                
+                                ]
+                        
+                            },
+                            {
+                                "id": "thapaserialnoe",
+                                "name": "Sweetcrispy Computer Desk",
+                                "price": 3000000,
+                                "colors": [
+                                "#ff0000",
+                                "#000000",
+                                "#CDD0D0"
+                                ],
+                                "image":"/images/HomePage1/h1feature8.jpg",
+                                "description1": "The large coffee table measures 19.7”Dia. x 15.7”H and the small coffee table measures 15.7”Dia. x 14.2”H; the compact size suitable for small spaces allows you to find the right place for afternoon tea, decorations, or a laptop for work",
+                                "description2":"The mix of quality particleboard and sturdy steel frame makes this side table set stable so that it won't wobble every time you pick up your coffee cup. Each small table can support up to 44 lb",
+                                "featured": true,
+                                "stock": 5,
+                                "reviews": 58,
+                                "stars": 4.8,
+                                "like":20,
+                                "comment":12,
+                                "share":10,
+                                "images":[
+                                    {
+                                        "id": "randomid1",
+                                        "width": 1080,
+                                        "height": 650,
+                                        "url":"/images/HomePage1/h1feature8.jpg",
+                                        "filename": "prod-2.png",
+                                        "size": 1080,
+                                        "type": "image/jpg"
+                                    },
+                                    {
+                                    "id": "randomid2",
+                                    "width": 1080,
+                                    "height": 650,
+                                    "url": "/images/HomePage1/h1feature8mini1.jpg",
+                                    "filename": "prod-2.png",
+                                    "size": 1080,
+                                    "type": "image/jpg"
+                                    },
+                                    {
+                                    "id": "randomid3",
+                                    "width": 1080,
+                                    "height": 650,
+                                    "url": "/images/HomePage1/h1feature8mini2.jpg",
+                                    "filename": "prod-3.png",
+                                    "size": 1080,
+                                    "type": "image/jpg"
+                                    },
+                                    {
+                                    "id": "randomid4",
+                                    "width": 1080,
+                                    "height": 650,
+                                    "url":"/images/HomePage1/h1feature8mini3.jpg",
+                                    "filename": "prod-4.png",
+                                    "size": 1080,
+                                    "type": "image/jpg"
+                                    }
+                                ]
+                        
+                        }
+                        
+]

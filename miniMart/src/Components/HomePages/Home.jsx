@@ -1,6 +1,7 @@
 import React from 'react'
 import HeroSection from '../HeroSection'
 import HeroSectionContentPart from '../HeroSectionContentPart'
+import FeatureProduct from '../FeatureProduct'
 
 
 function Home() {
@@ -8,7 +9,10 @@ function Home() {
     <>
         <HeroSection/>
         <HeroSectionContentPart/>
-
+        <FeatureProduct/>
+    
+     
+        kkkk
     </>
   )
 }

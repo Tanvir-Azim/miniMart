@@ -8,6 +8,22 @@ const ProductReducer=(state,action)=>{
             product:action.payload
         }
     }
+    if(action.type==="FEATURE_VALUE"){
+        return{
+            ...state,
+            feature:true
+        }
+    }
+
+    if(action.type === "UPDATE_FEATURE_DATA"){
+        const featureProduct = state.product.filter((curElement)=>{
+            return curElement.featured === true
+        })
+        return{
+            ...state,
+            featureProduct:featureProduct
+        }
+    }
 
     return state;
 

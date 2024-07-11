@@ -1,10 +1,12 @@
 import React, { createContext, useContext, useEffect, useReducer } from 'react'
 import Data from '../Product.json'
 import reducer from './ProductReducer'
+import FeatureProduct from './FeatureProduct'
 
 const initialState={
     product:[],
-    featureProduct:[]
+    featureProduct:[],
+    feature:true, p
 }
 
 
@@ -12,16 +14,33 @@ const initialState={
 const AppContax=createContext()
 function ProdaxContax({children}) {
 
+ 
+    const[state,dispath]=useReducer(reducer,initialState)
+
     useEffect(()=>{
         dispath({
             type:"ADD_JSON_DATA",
             payload:Data
         })
     },[])
-    const[state,dispath]=useReducer(reducer,initialState)
+
+const getFeatureData=()=>{
+  dispath({
+    type:"FEATURE_VALUE"
+  })
+}
+
+useEffect(()=>{
+    dispath({
+        type:"UPDATE_FEATURE_DATA",
+        payload:Data
+    })
+},[])
+
+console.log(FeatureProduct)
   return (
     <>
-        <AppContax.Provider value={{...state}}>
+        <AppContax.Provider value={{...state,getFeatureData,FeatureProduct}}>
             {children}
         </AppContax.Provider>
     </>

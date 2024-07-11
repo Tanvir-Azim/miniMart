@@ -69,6 +69,7 @@
         ],
         "description": "The mobile is compact with its 6.2-inch OLED screen and far lighter at 168g. It perfectly captures the design, looks, and feel of the expensive one. It comes with a snapdragon processor with a 5n chip in it. It has a 200mp camera in the rear 100mp in front perfect for selfie lovers. It also support HDR content means you can watch 4K content on it.",
         "category": "Chair",
+        "image": "/images/HomePage1/h1feature2.jpg",
         "shipping": true,
         "featured":true,
         "stock": 10,
@@ -331,7 +332,7 @@
                 
                         },
                         {
-                            "id": "thapaserialnob",
+                            "id": "thapaserialnof",
                             "name": "Round Side End Table",
                             "price": 5000000,
                             "colors": [
@@ -398,7 +399,7 @@
                                 "#000000",
                                 "#CDD0D0"
                                 ],
-                                "image":"/images/HomePage1/h1feature8.jpg",
+                                "image":"/images/HomePage1/h1feature8mini2.jpg",
                                 "description1": "The large coffee table measures 19.7”Dia. x 15.7”H and the small coffee table measures 15.7”Dia. x 14.2”H; the compact size suitable for small spaces allows you to find the right place for afternoon tea, decorations, or a laptop for work",
                                 "description2":"The mix of quality particleboard and sturdy steel frame makes this side table set stable so that it won't wobble every time you pick up your coffee cup. Each small table can support up to 44 lb",
                                 "featured": true,
@@ -448,5 +449,5 @@
                                 ]
                         
                         }
-                        
+                     
 ]

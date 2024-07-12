@@ -39,6 +39,7 @@ import Search from "./Search"
 import ProfilePage from "./Components/ProfilePage"
 //import Footer from "./Components/Footer"
 import SingleProductPage from "./Components/SingleProductPage"
+import DtailProduct from "./Components/DtailProduct"
 
 
 function App() {
@@ -83,7 +84,8 @@ function App() {
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/search" element={<Search/>}/>
         <Route path="/profile" element={<ProfilePage/>}/> 
-        <Route path="/singleproductpage/:id" element={<SingleProductPage/>}/>   
+        <Route path="/singleproductpage/:id" element={<SingleProductPage/>}/>
+        <Route path="/dtailproduct" element={<DtailProduct/>}/>    
       </Routes>
     </BrowserRouter>
     </>

@@ -6,7 +6,7 @@ import FeatureProduct from './FeatureProduct'
 const initialState={
     product:[],
     featureProduct:[],
-    feature:true, p
+    feature:true,
 }
 
 

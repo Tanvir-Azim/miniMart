@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import Data from './data.json'
 //import Data from './Product.json'
 
 function SingleProductPageId() {
-const [data,setData]=useState([])
+
 
 
 
@@ -21,16 +21,20 @@ const [data,setData]=useState([])
    
   
    const miniImg=singleproduct.map((curElement)=>{
-    return( curElement.images[1])
+    return( curElement.images)
    })
 
+   const singleImg = miniImg.map((curElement)=>{
+    return curElement
+   }
+  )
+
+  console.log(singleImg)
    
        
    
 
-   useEffect(()=>{
-    setData(singleproduct)
-   },[])
+
 
 
     
@@ -39,14 +43,11 @@ const [data,setData]=useState([])
     <>
       {
         miniImg.map((curElement)=>{
-          return <img src={curElement.url}/>
+          const{img}=curElement
+          console.log(img)
         })
       }
       
-      <img src="/images/HomePage1/h1feature2.jpg"/>
-    <img src='/images/HomePage1/h1feature2mini1.jpg'/>
-    <img src='/images/HomePage1/h1feature2mini2.jpg'/>
-    <img src='/images/HomePage1/h1feature2mini3.jpg'/>
     </>
   )
 }

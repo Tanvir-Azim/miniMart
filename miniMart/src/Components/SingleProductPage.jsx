@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import { useProductContax } from './ProdaxContax'
 import Star from './Star'
@@ -8,88 +8,87 @@ import { IoMdHeart } from "react-icons/io";
 import { TbCurrencyTaka } from "react-icons/tb";
 import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import styled from 'styled-components';
 
-function SingleProductPage() {
-  const {featureProduct}=useProductContax()
+function SingleProductPage(){
+
+const {product}=useProductContax()
+console.log(product)
   const{id}=useParams()
-  const singleproduct = featureProduct.filter((curElement)=>{
+  const singleproduct = product.filter((curElement)=>{
     return curElement.id === id
   })
 
-  const a = singleproduct.map((curElement)=>{
-    return(curElement.images[0])
-
-    })
-    
-
-  const b = singleproduct.map((curElement)=>{
-    return(curElement.images[1])
-  })
-  const c = singleproduct.map((curElement)=>{
-    return(curElement.images[2])
-  })
-  const d = singleproduct.map((curElement)=>{
-    return(curElement.images[3])
-  })
-
-  const e = singleproduct.map((curElement)=>{
-    return(curElement.images[3])
-  })
-  const f = singleproduct.map((curElement)=>{
-    return(curElement.images[4])
-  })
-
-  const g = singleproduct.map((curElement)=>{
-    return(curElement.images[4])
-  })
-//img section filter
-
-  const gimg = f.map((curElement)=>{
-    return curElement.url
-  })
   
-  const fimg = f.map((curElement)=>{
-    return curElement.url
+  const images=singleproduct.map((curElement)=>{
+    return curElement.images
   })
-  
-  const eimg = e.map((curElement)=>{
-    return curElement.url
-  })
-console.log(eimg[0])
+  console.log(images[0])
 
-const aimg = a.map((curElement)=>{
-  return curElement.url
-})
-const bimg = b.map((curElement)=>{
-  return curElement.url
-})
-const cimg = c.map((curElement)=>{
-  return curElement.url
-})
-const dimg = d.map((curElement)=>{
-  return curElement.url
-})
+
+const Wraper = styled.section`
+.carousel .control-arrow{
+  background-color:gray;
+  width: 20px;
+  height: 80px;
+  margin-top: -43px;
+  padding: 2px;
+  
+
+}
+
+.control-dots{
+  visibility: hidden;
+
+}
+
+
+
+`
 
   return (
     <>
-     <div className=' w-[100%] h-[90vh] b-red-300 grid grid-cols-2 grid-rows-1'>
-        <di className='bg-white'>
-        <div  className=' grid place-items-center'><img src={aimg[0]} className=' w-[530px]'/></div>
-        <div className=' flex justify-between'>
-          <img src={bimg[0]} className=' w-[100px] h-[80px]'/>
-          <img src={cimg[0]} className=' w-[100px] h-[80px]'/>
-          <img src={dimg[0]} className=' w-[100px] h-[80px]'/> 
-          <img src={gimg[0]} className=' w-[100px] h-[80px]'/>
-          <img src={fimg[0]} className=' w-[100px] h-[80px]'/>
-          <img src={eimg[0]} className=' w-[100px] h-[80px]'/>
+     <div className=' w-[100%] h-[90vh] b-red-300 grid grid-cols-2 grid-rows-1 md:grid-cols-[500px] md:grid-rows-[500px 500px]   md:h-[250vh] md:flex md:flex-col   md:items-center sm:h-[240vh] sm:flex sm:flex-col   sm:items-center xs:h-[240vh] xs:flex xs:flex-col   xs:items-center'>
+        <div className='bg-white'>
+        <div  className=''></div>
+        <div className=' bg-gren-200 grid place-items-center  h-[700px]'>
+         <div className=' bg-ornge-900 grid place-items-center h-[600px] w-[500px] md:w-[500px] sm:w-[500px] xs:w-[400px] '>
+
+
+
+          
+          
+          
+         <Wraper>
+            <Carousel className=' w-[400px] h-[600px] ml-4'
+            showArrows={false}
+            >
+              {
+               
+               images[0].map((curEl)=>{
+                 return <img src={ curEl.url}/>})  
+             }
+ 
+            
+
+            </Carousel>
+            </Wraper>
+         
+         
+            </div>
+          
+
+         
         
 
         
          
         </div> 
-        </di>
-        <div className=' bg-orange-30'>
-          <div className=' w-[70%] h-full bg-white '>
+        </div>
+        <div className=' w-full h-full bg-orange-30 md:grid  md:place-items-center sm:grid  sm:place-items-center xs:grid  xs:place-items-center md:mt-[50px] sm:mt-[50px] xs:mt-[50px]  '>
+          <div className=' w-[70%] h-full bg-white md:w-[500px] md:grid md:place-items-center sm:w-[410px] sm:grid sm:place-items-center xs:w-[410px] xs:grid xs:place-items-center  '>
             {
               singleproduct.map((curElement)=>{
               const {id,name,price,reviews,share,stars,stock,like,description,comment,colors,category ,description2,discount}=curElement

@@ -16,7 +16,7 @@ function Star({star,reviews}) {
             )
     })
   return (
-    <div >
+    <div className='flex' >
      
 
         {reatingStart}

@@ -7,9 +7,16 @@ import { FaRegEye } from "react-icons/fa";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { CiHeart } from "react-icons/ci";
 import { TbCurrencyTaka } from "react-icons/tb";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import Star from './Star';
-function FeatureProduct() {
-   const{featureProduct}=useProductContax()
+import Slider from "react-slick";
+
+
+
+function SlickCarousel() {
+   const{bestSellerProduct}=useProductContax()
 
    const Wraper = styled.section`
 
@@ -31,20 +38,39 @@ function FeatureProduct() {
    .main:hover .menu{
     
      visibility: visible;
+
+ 
+   }
+   button.slick-arrow.slick-next{
+
+    background-color:red;
+    display:  flex;
+   }
+   button{
+    background-color:black
+    
    }
    `
-   
+     var settings = {
+      dots:false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll:1
+     
+      
+    };
     //lg:place-items-center  
    
      return (
        <Wraper>
       
-      <div className='w-[77%] h-[95vh]  md:h-[215vh] sm:h-[215vh] xs:h-[215vh] lg:w-[85%] grid grid-cols-4 grid-rows-2 gap-4 m-auto mt-10  sm:mt-[20px] md:grid-cols-2 md:grid-rows-[170px 170px  ] sm:grid-cols-2 sm:grid-rows-[170px 170px 170px 170px  ] xs:grid-cols-2 xs:grid-rows-[170px 170px 170px 170px] lg:gap-20 '>
+      <div className='w-[1200px] h-[95vh]  md:h-[215vh] sm:h-[215vh] xs:h-[215vh] lg:w-[85%] grid grid-cols-4 grid-rows-2 gap-4 m-auto mt-10  sm:mt-[20px] md:grid-cols-2 md:grid-rows-[170px 170px  ] sm:grid-cols-2 sm:grid-rows-[170px 170px 170px 170px  ] xs:grid-cols-2 xs:grid-rows-[170px 170px 170px 170px] lg:gap-20 '>
        
-   
+            <Slider {...settings} className= 'w-[1200px]'>
                  {
                    
-                   featureProduct.map((curElement)=>{
+                   bestSellerProduct.map((curElement)=>{
                     
                      return (
                      <NavLink to={`/singleproductpage/${curElement.id}`}>
@@ -55,7 +81,9 @@ function FeatureProduct() {
                           
                             <ul className='main w-[200px] h-[260px]  '>{/*card air name price air div*/}
                                 <li>
+                                <div>
                                    <img src={curElement.image} className='img w-[200px] h-[170px] xl:w-[170px] md:w-[130px] lg:w-[50px] lg:h-[60px]'/>
+                                   </div>
                                    
                                    <li className='menu'>
                                      <div className=' flex  w-full h-full items-center '>
@@ -97,6 +125,7 @@ function FeatureProduct() {
                    })
                  
                  }
+              </Slider>
              
                  
            </div>
@@ -106,6 +135,4 @@ function FeatureProduct() {
      )
    }
    
-
-
-export default FeatureProduct
+   export default SlickCarousel

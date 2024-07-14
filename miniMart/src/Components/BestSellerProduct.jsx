@@ -8,8 +8,8 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { CiHeart } from "react-icons/ci";
 import { TbCurrencyTaka } from "react-icons/tb";
 import Star from './Star';
-function FeatureProduct() {
-   const{featureProduct}=useProductContax()
+function BestSellerProduct() {
+   const{bestSellerProduct}=useProductContax()
 
    const Wraper = styled.section`
 
@@ -44,7 +44,7 @@ function FeatureProduct() {
    
                  {
                    
-                   featureProduct.map((curElement)=>{
+                   bestSellerProduct.map((curElement)=>{
                     
                      return (
                      <NavLink to={`/singleproductpage/${curElement.id}`}>
@@ -106,6 +106,4 @@ function FeatureProduct() {
      )
    }
    
-
-
-export default FeatureProduct
+   export default BestSellerProduct

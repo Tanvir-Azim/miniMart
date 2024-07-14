@@ -105,7 +105,7 @@ cursor: pointer;
 
             <div className=' w-[300px] grid place-items-center lg:w-[200px] xs:w-[200px]'>
                 <NavLink to='/'>
-                  <h3 className=' text-3xl  font-bold'>mini<span className=' text-red-500'>Mart</span></h3>
+                  <h3 className=' text-3xl  font-bold '>mini<span className=' text-red-500'>Mart</span></h3>
                 </NavLink>
             </div>
             <div className='  flex mr-10  z-30'>
@@ -116,7 +116,7 @@ cursor: pointer;
                       <li className=' relative'><NavLink  to='/'>HOME</NavLink>
                       
                   
-                        <ul className= ' bg-white  absolute w-32 top-11 left-[-35px] text-gray-500 tracking-tight'>
+                        <ul className= ' bg-white  absolute w-32 top-11 left-[-35px] text-gray-500 tracking-tight '>
 
                           <li className='text-[12px] h-10 grid place-items-center'><NavLink to='/homepage1'>HOMEPAGE 1</NavLink></li>
                           <hr/>

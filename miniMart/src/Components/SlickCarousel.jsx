@@ -1,5 +1,5 @@
 import React from 'react'
-import { useProductContax } from './ProdaxContax'
+//import { useProductContax } from './ProdaxContax'
 //import ProductData from './ProductData'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
@@ -15,8 +15,9 @@ import Slider from "react-slick";
 
 
 
-function SlickCarousel() {
-   const{bestSellerProduct}=useProductContax()
+function SlickCarousel(props) {
+  const bestSellerProduct = props.miniproduct
+   //const{bestSellerProduct}=useProductContax()
 
    const Wraper = styled.section`
 
@@ -43,31 +44,96 @@ function SlickCarousel() {
    }
    button.slick-arrow.slick-next{
 
-    background-color:red;
+  
     display:  flex;
+    background-color:gray;
+    width:50px;
+    height: 50px;
+    border-radius: 100%;
+    color:red;
+  
+   
    }
    button{
-    background-color:black
+    background-color:gray;
+    width:50px;
+    height: 50px;
+    border-radius: 100%;
+  
     
    }
    `
      var settings = {
-      dots:false,
-      infinite: true,
+      dots: false,
+      infinite: false,
       speed: 500,
       slidesToShow: 4,
-      slidesToScroll:1
-     
-      
+      slidesToScroll: 1,
+      initialSlide: 0,
+      responsive: [
+
+
+        {
+          breakpoint: 1300,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots:false
+          }
+        },
+
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false
+          }
+        },
+
+        {
+          breakpoint:650,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
     //lg:place-items-center  
    
      return (
        <Wraper>
-      
-      <div className='w-[1200px] h-[95vh]  md:h-[215vh] sm:h-[215vh] xs:h-[215vh] lg:w-[85%] grid grid-cols-4 grid-rows-2 gap-4 m-auto mt-10  sm:mt-[20px] md:grid-cols-2 md:grid-rows-[170px 170px  ] sm:grid-cols-2 sm:grid-rows-[170px 170px 170px 170px  ] xs:grid-cols-2 xs:grid-rows-[170px 170px 170px 170px] lg:gap-20 '>
+            <div className=' w-full h-[75vh] grid place-items-center bg-white xs:mt-[150px] '>
+           
+
+                 <div className=' w-[76%] h-[80px]   mx-auto  mt-20 flex flex-col items-center justify-center  '>
+                  <p className='  text-3xl font-bold text-gray-800'>BEST SELLER</p>
+                 <p className='  font-bold -tracking-[-2px]  text-gray-500 '>EXCEPTEUR SINT OCCAECAT</p> 
+                 </div>  
        
-            <Slider {...settings} className= 'w-[1200px]'>
+        <div className=' w-[1200ps] h-[53vh] flex items-center justify-center lg:w-[800px] md:w-[795px] '>
+             
+            <Slider {...settings} className= 'w-[90%] xl:w-[1200px] sm:w-[580px]  md:w-[600px] xs:w-[400px] lg:w-[1000px] 2xl:w-[1400px]'>
                  {
                    
                    bestSellerProduct.map((curElement)=>{
@@ -82,7 +148,7 @@ function SlickCarousel() {
                             <ul className='main w-[200px] h-[260px]  '>{/*card air name price air div*/}
                                 <li>
                                 <div>
-                                   <img src={curElement.image} className='img w-[200px] h-[170px] xl:w-[170px] md:w-[130px] lg:w-[50px] lg:h-[60px]'/>
+                                   <img src={curElement.image} className=' w-[230px] h-[170px]' />
                                    </div>
                                    
                                    <li className='menu'>
@@ -130,7 +196,8 @@ function SlickCarousel() {
                  
            </div>
              
-           
+           </div>
+         
            </Wraper>
      )
    }

@@ -7,10 +7,11 @@ import { useProductContax } from '../ProdaxContax'
 import LatestProduct from '../LatestProduct'
 import BestSellerProduct from '../BestSellerProduct'
 import SlickCarousel from '../SlickCarousel'
+import ProductList from '../ProductList'
 
 
 function Home() {
-  const{feature,latest,bestSeller}=useProductContax()
+  const{feature,latest,bestSeller,bestSellerProduct}=useProductContax()
 
 
   return (
@@ -22,7 +23,8 @@ function Home() {
        {feature && <FeatureProduct/> }
        {latest && <LatestProduct/>}
        {bestSeller && <BestSellerProduct/>}
-       <SlickCarousel/>
+       <SlickCarousel miniproduct={bestSellerProduct}/>
+       <ProductList/>
     </>
   )
 }

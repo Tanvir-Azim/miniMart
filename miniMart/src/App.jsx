@@ -37,7 +37,7 @@ import ContactPage1 from "./Components/Contact/ContactPage1"
 import ContactPage2 from "./Components/Contact/ContactPage2"
 import Search from "./Search"
 import ProfilePage from "./Components/ProfilePage"
-//import Footer from "./Components/Footer"
+import Footer from "./Components/Footer"
 import SingleProductPage from "./Components/SingleProductPage"
 import DtailProduct from "./Components/DtailProduct"
 
@@ -87,6 +87,7 @@ function App() {
         <Route path="/singleproductpage/:id" element={<SingleProductPage/>}/>
         <Route path="/dtailproduct" element={<DtailProduct/>}/>    
       </Routes>
+      <Footer/>
     </BrowserRouter>
     </>
   )

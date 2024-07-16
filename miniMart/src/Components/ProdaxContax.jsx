@@ -11,11 +11,18 @@ const initialState={
     featureProduct:[],
     latestProduct:[],
     bestSellerProduct:[],
+    hotSale:[],
+    miniFeatured:[],
+    saleProduct:[],
+    topRate:[],
 
     feature:true,
     latest:false,
     bestSeller:false
+    
 }
+
+
 
 
 
@@ -38,22 +45,18 @@ const getFeatureData=()=>{
 }
 
 useEffect(()=>{
-    setTimeout(()=>{
         dispath({
             type:"UPDATE_FEATURE_DATA",
             payload:Data
-        },5000)
     })
         
 },[])
 
 useEffect(()=>{
-setTimeout(()=>{
     dispath({
         type:"UPDATE_LATEST_DATA",
         payload:Data
     })
-},3000)
   
 },[])
 
@@ -75,6 +78,30 @@ useEffect(()=>{
     })
 },[])
 
+useEffect(()=>{
+    dispath({
+        type:"hotSale"
+    })
+},[])
+
+useEffect(()=>{
+    dispath({
+        type:"miniFeatured"
+    })
+},[])
+
+useEffect(()=>{
+    dispath({
+        type:"saleProduct"
+    })
+},[])
+
+useEffect(()=>{
+   
+    dispath({
+        type:"topRate"
+    })
+},[])
 
   return (
     <>

@@ -65,7 +65,7 @@ const ProductReducer=(state,action)=>{
         const bestSeller=state.product.filter((curElement)=>{
             return curElement.bestseller === true
         })
-        console.log(bestSeller)
+     
 
         return{
             ...state,
@@ -73,10 +73,58 @@ const ProductReducer=(state,action)=>{
         }
     }
 
+    if(action.type === "hotSale"){
+        const hotSale = state.product.filter((curElement)=>{
+            return curElement.hotsale === true
+        })
+ 
+        return{
+            ...state,
+            hotSale:hotSale
+        }
+    }
 
+    if(action.type === "miniFeatured"){
+        const miniFeatured = state.product.filter((curElement)=>{
+            return curElement.featuredmini === true
+        })
+   
+        
+        return{
+            ...state,
+            miniFeatured:miniFeatured
+        }
+    }
+
+    if(action.type === "saleProduct"){
+        const saleProduct = state.product.filter((curElement)=>{
+            return curElement.saleProduct === true
+        })
+
+        return{
+            ...state,
+            saleProduct:saleProduct
+        }
+    }
+
+    if(action.type === "topRate"){
+        const  topRate = state.product.filter((curElement)=>{
+            return curElement.toprate === true      
+        })
+   
+        return{
+            ...state,
+            topRate:topRate,
+        }
+     
+    }
     return state;
-
 }
+    
+   
+
+
+   
 
 export default ProductReducer
   

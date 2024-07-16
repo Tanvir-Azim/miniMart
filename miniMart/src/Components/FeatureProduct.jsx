@@ -39,7 +39,7 @@ function FeatureProduct() {
      return (
        <Wraper>
       
-      <div className='w-[77%] h-[95vh]  md:h-[215vh] sm:h-[215vh] xs:h-[215vh] lg:w-[85%] grid grid-cols-4 grid-rows-2 gap-4 m-auto mt-10  sm:mt-[20px] md:grid-cols-2 md:grid-rows-[170px 170px  ] sm:grid-cols-2 sm:grid-rows-[170px 170px 170px 170px  ] xs:grid-cols-2 xs:grid-rows-[170px 170px 170px 170px] lg:gap-20 '>
+      <div className=' w-[77%] h-[95vh]  md:h-[150vh] sm:h-[150vh] xs:h-[320vh]lg:w-[85%] grid grid-cols-4 grid-rows-2 gap-4 m-auto mt-10  sm:mt-[20px] md:grid-cols-2 md:grid-rows-[170px 170px  ] sm:grid-cols-2 sm:grid-rows-[170px 170px 170px 170px] xs:grid-cols-1 xs:grid-rows-[170px 170px 170px] lg:gap-20 '>
        
    
                  {
@@ -55,7 +55,7 @@ function FeatureProduct() {
                           
                             <ul className='main w-[200px] h-[260px]  '>{/*card air name price air div*/}
                                 <li>
-                                   <img src={curElement.image} className='img w-[200px] h-[170px] xl:w-[170px] md:w-[130px] lg:w-[50px] lg:h-[60px]'/>
+                                   <img src={curElement.image} className='img w-[200px] h-[170px] xl:w-[170px] md:w-[130px] lg:w-[50px] lg:h-[60px] '/>
                                    
                                    <li className='menu'>
                                      <div className=' flex  w-full h-full items-center '>

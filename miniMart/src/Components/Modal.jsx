@@ -42,7 +42,7 @@ function Modal() {
 
                   <div className=' w-full h-full flex items-center'>
 
-                      <li onClick={()=>{HomeToggle()}} className=' text-[17px] relative  h-10 ml-5 flex items-center'><NavLink  to='/'>HOME</NavLink>
+                      <li onClick={()=>{HomeToggle()}} className=' text-[17px] relative  h-10 ml-5 flex items-center'><NavLink  to=''>HOME</NavLink>
                         {showProduct && <HomeNavigation/>}
                       </li>
                       <div>
@@ -51,7 +51,7 @@ function Modal() {
                    </div>
                     <hr/>
                     <div className=' w-full h-full flex items-center'>
-                        <li onClick={()=>{ProductToggle()}}><NavLink  to='/product' className=' text-[17px] relative  h-10 ml-5 flex items-center'>PRODUCTS</NavLink>
+                        <li onClick={()=>{ProductToggle()}}><NavLink  to='' className=' text-[17px] relative  h-10 ml-5 flex items-center'>PRODUCTS</NavLink>
                         {productData && <ProductNavigation/>}
                         </li>
 
@@ -62,7 +62,7 @@ function Modal() {
                     
                     <hr/>
                     <div className=' w-full h-full flex items-center'>
-                        <li onClick={()=>{BlogToggle()}}><NavLink  to='/blog' className=' text-[17px] relative  h-10 ml-5 flex items-center'> BLOG</NavLink>
+                        <li onClick={()=>{BlogToggle()}}><NavLink  to='' className=' text-[17px] relative  h-10 ml-5 flex items-center'> BLOG</NavLink>
                         {blogDropdawn && <BlogNavagate/>}
                         </li>
 
@@ -73,7 +73,7 @@ function Modal() {
                     <hr/>
 
                      <div className=' w-full h-full flex items-center'>
-                        <li><NavLink  to='/pages' className=' text-[17px] relative  h-10 ml-5 flex items-center'>PAGES</NavLink></li>
+                        <li><NavLink  to='' className=' text-[17px] relative  h-10 ml-5 flex items-center'>PAGES</NavLink></li>
 
                         <div>
                         <MdKeyboardArrowDown className=' text-[20px]'/>
@@ -89,7 +89,7 @@ function Modal() {
                     </div>
                     <hr/>
                     <div className=' w-full h-full flex items-center'>
-                        <li onClick={()=>{ContactToggle()}}><NavLink  to='/contact' className=' text-[17px] relative  h-10 ml-5 flex items-center'>CONTACT</NavLink>
+                        <li onClick={()=>{ContactToggle()}}><NavLink  to='' className=' text-[17px] relative  h-10 ml-5 flex items-center'>CONTACT</NavLink>
                         {contactDropdawn && <ContactNavation/>}
                         </li>
 

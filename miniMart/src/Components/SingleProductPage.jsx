@@ -6,27 +6,34 @@ import { PiShareNetworkFill } from "react-icons/pi";
 import { MdCompareArrows } from "react-icons/md";
 import { IoMdHeart } from "react-icons/io";
 import { TbCurrencyTaka } from "react-icons/tb";
-import { FaMinus } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa6";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
+import Header from './Header';
+import CartData from './CartData';
+import { useCardContax } from './CartContax';
+
 
 function SingleProductPage(){
+  const {AddToWish} =useCardContax()
+
 
 const {product}=useProductContax()
+
 console.log(product)
   const{id}=useParams()
   const singleproduct = product.filter((curElement)=>{
     return curElement.id === id
   })
 
+
+
   
   const images=singleproduct.map((curElement)=>{
     return curElement.images
   })
-  console.log(images[0])
 
+console.log(images[0])
 
 const Wraper = styled.section`
 .carousel .control-arrow{
@@ -50,6 +57,7 @@ const Wraper = styled.section`
 
   return (
     <>
+    <Header/>
      <div className=' w-[100%] h-[90vh] b-red-300 grid grid-cols-2 grid-rows-1 md:grid-cols-[500px] md:grid-rows-[500px 500px]   md:h-[250vh] md:flex md:flex-col   md:items-center sm:h-[240vh] sm:flex sm:flex-col   sm:items-center xs:h-[240vh] xs:flex xs:flex-col   xs:items-center'>
         <div className='bg-white'>
         <div  className=''></div>
@@ -91,7 +99,7 @@ const Wraper = styled.section`
           <div className=' w-[70%] h-full bg-white md:w-[500px] md:grid md:place-items-center sm:w-[410px] sm:grid sm:place-items-center xs:w-[410px] xs:grid xs:place-items-center  '>
             {
               singleproduct.map((curElement)=>{
-              const {id,name,price,reviews,share,stars,stock,like,description,comment,colors,category ,description2,discount}=curElement
+              const {id,name,price,reviews,share,stars,stock,like,description,comment,colors,category ,description2,discount,available}=curElement
               return(
                 <>
                 <div className=' '>
@@ -102,11 +110,11 @@ const Wraper = styled.section`
                      <p className=' flex'><Star star={stars}/><span className=' ml-2 text-gray-500'>Reviews({reviews})</span></p>
                     </div>
 
-                    <div className=' w-[90%] h-14  flex items-center text-gray-500 cursor-pointer'>
-                        <div className=' flex w-[100px] h-full items-center '><PiShareNetworkFill className=' text-[19px] mr-2'/> <p className=' text-[13px]'>SHARE</p></div>
-                        <div className=' flex w-[100px] h-full items-center  justify-center'><MdCompareArrows className=' text-[19px] mr-2'/> <p className=' text-[13px]'>COMPARE</p></div>
+                    <div className=' w-[90%] h-14  flex items-center text-gray-500 cursor-pointer '>
+                        <div className=' flex w-[100px] h-full items-center hover:text-red-500'><PiShareNetworkFill className=' text-[19px] mr-2'/> <p className=' text-[13px]'>SHARE</p></div>
+                        <div className=' flex w-[100px] h-full items-center  justify-center hover:text-red-500'><MdCompareArrows className=' text-[19px] mr-2 '/> <p className=' text-[13px]'>COMPARE</p></div>
                         <NavLink to='/heart'>
-                          <div className=' flex w-[150px] h-full items-center  justify-center'><IoMdHeart className=' text-[19px] mr-2'/><p className=' text-[13px]'>TO WISH LIST</p> </div>
+                          <div className=' flex w-[150px] h-full items-center  justify-center hover:text-red-500'><IoMdHeart className=' text-[19px] mr-2 '/><p className=' text-[13px]' onClick={()=>{AddToWish(curElement)}}>TO WISH LIST</p> </div>
                         </NavLink>
                         
                     </div>
@@ -129,18 +137,8 @@ const Wraper = styled.section`
                       </div>
                     </div>
 
-                    <div className='flex w-[400px] h-[100px]  items-center justify-around'>
-
-                      QTY 
-                      <div className=' flex items-center bg-white border-[1px] border-gray-500 cursor-pointer'>
-                          <div className=' w-10 h-8  grid place-items-center border-r-2 border-gray-400'><FaMinus/></div>
-                          <div className=' w-10 h-8  grid place-items-center'>01</div>
-                          <div className='w-10 h-8  grid place-items-center border-l-2 border-gray-400 '><FaPlus/></div>
-
-                      </div>
-                      <div>
-                         <NavLink to='/cart'><button className=' w-40 h-9 bg-red-400 font-bold text-white rounded-3xl hover:bg-black'> ADD TO CART</button></NavLink> 
-                      </div>
+                    <div>
+                          <CartData product={curElement}/>
                     </div>
                 </>
               )

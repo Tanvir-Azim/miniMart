@@ -118,6 +118,18 @@ const ProductReducer=(state,action)=>{
         }
      
     }
+
+    if(action.type === "h2_LOADING"){
+        const  h2banner = state.product.filter((curElement)=>{
+            return curElement.h2banner === true  
+                
+        })
+        console.log(h2banner)
+            return{
+                ...state,
+                h2Banner:h2banner
+            }
+    }
     return state;
 }
     

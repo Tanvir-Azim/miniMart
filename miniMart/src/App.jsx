@@ -7,7 +7,6 @@ import Pages from "./Components/Pages/Pages"
 import Blog from "./Components/Blog/Blog"
 import Contact from "./Components/Contact/Contact"
 import Cart from "./Components/Cart"
-import Header from "./Components/Header"
 import Product from "./Components/ProductPages/Product"
 import { BrowserRouter,Routes,Route, RouterProvider, NavLink } from "react-router-dom"
 import Heart from "./Heart"
@@ -40,6 +39,10 @@ import ProfilePage from "./Components/ProfilePage"
 import Footer from "./Components/Footer"
 import SingleProductPage from "./Components/SingleProductPage"
 import DtailProduct from "./Components/DtailProduct"
+import ErrorPage from "./Components/ErrorPage"
+import GridView from "./Components/GridView"
+import ListView from "./Components/ListView"
+import LoginPage from "./Components/LoginPage"
 
 
 function App() {
@@ -48,9 +51,10 @@ function App() {
   return (
     <>
        <BrowserRouter>
-       <Header/>
-      <Routes>
-        <Route path="/" element={<Home />}/>
+      
+       
+        <Routes>
+        <Route path="/" element={<Home/>}/>
         <Route path="/product" element={<Product />}/>
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/pages" element={<Pages/>}/>
@@ -85,9 +89,13 @@ function App() {
         <Route path="/search" element={<Search/>}/>
         <Route path="/profile" element={<ProfilePage/>}/> 
         <Route path="/singleproductpage/:id" element={<SingleProductPage/>}/>
-        <Route path="/dtailproduct" element={<DtailProduct/>}/>    
+        <Route path="/dtailproduct" element={<DtailProduct/>}/>
+        <Route path="*" element={<ErrorPage/>}/>
+        <Route path="/gridview" element={<GridView/>}/>
+        <Route path="/listview" element={<ListView/>}/>
+        <Route path="/loginpage" element={<LoginPage/>}/>
+            
       </Routes>
-      <Footer/>
     </BrowserRouter>
     </>
   )

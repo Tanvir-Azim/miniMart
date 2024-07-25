@@ -10,14 +10,17 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import PageContent from './PageContent';
 import { HiOutlineLockClosed } from "react-icons/hi2";
 import ProfilePage from './ProfilePage';
+import { useCardContax } from './CartContax';
 
 
 
 
 function Header() {
+  const{cart,wish}=useCardContax()
   
   const [showModal,setShowModal]=useState(false)
   const [profileDropdawn,setProfileDropdawn]=useState(false)
+  
 
 
   
@@ -113,7 +116,7 @@ cursor: pointer;
                   <ul className=' flex space-x-14  font-light text-md tracking-[2px] xs:hidden sm:hidden md:hidden  lg:space-x-5  items-center'>
 
                     <Menu>
-                      <li className=' relative'><NavLink  to='/'>HOME</NavLink>
+                      <li className=' relative'><NavLink  to=''>HOME</NavLink>
                       
                   
                         <ul className= ' bg-white  absolute w-32 top-11 left-[-35px] text-gray-500 tracking-tight '>
@@ -144,7 +147,7 @@ cursor: pointer;
                       </Menu>
                       <ProductMenu>
                       
-                      <li className=' relative'><NavLink  to='/product'>PRODUCTS</NavLink>
+                      <li className=' relative'><NavLink  to=''>PRODUCTS</NavLink>
                         <ul className= ' bg-white  absolute w-32  top-11  right-[-15px] tracking-tight text-gray-500'>
 
                           <li className='text-[11px] font-[400] h-10 grid place-items-center'><NavLink to='/productpage1'>PRODUCT GRID VIEW</NavLink></li>
@@ -169,8 +172,8 @@ cursor: pointer;
                       </ProductMenu>
 
                       <ProductMenu>
-                      <li className=' relative'><NavLink  to='/blog'>BLOG</NavLink>
-                      <ul className= ' bg-white  absolute w-40  top-11  right-[-90px] tracking-tight text-gray-500 '>
+                      <li className=' relative'><NavLink  to=''>BLOG</NavLink>
+                      <ul className= ' bg-white  absolute w-40  top-11  right-[-90px] tracking-tight '>
 
                           <li className='text-[11px] font-[400] h-10 flex items-center w-full ml-4 '><NavLink to='/blogpage1'>BLOG FULLWIDTH PAGE</NavLink></li>
                             <hr/>
@@ -188,8 +191,8 @@ cursor: pointer;
                       <div className='  w-auto    flex items-center '>
                           <div className=''>
                           <ProductMenu>
-                            <li><NavLink  to='/pages' className='relative'>PAGES </NavLink>
-                            <ul className=' w-[1300px] h-[450px] bg-gray-300 absolute  left-[150px] mt-5'><PageContent/></ul>
+                            <li><NavLink  to='' className='relative'>PAGES </NavLink>
+                            <ul className=' w-[1300px] h-[450px] absolute  left-[150px] mt-5 border-[1px] bg-gray-300'><PageContent/></ul>
 
                           </li>
                           </ProductMenu>
@@ -222,10 +225,10 @@ cursor: pointer;
                       <IoSearchOutline className=' w-7 h-7 ' />
                   </NavLink>
                     <NavLink to='/heart'>
-                      <div className=' h-auto w-auto flex relative'><CiHeart className=' w-8 h-8'/><span className=' bg-black text-white w-4 h-4 grid place-items-center rounded-full text-[11px] absolute top-3 left-5'>3</span></div>
+                      <div className=' h-auto w-auto flex relative'><CiHeart className=' w-8 h-8'/><span className=' bg-red-500 text-white w-4 h-4 grid place-items-center rounded-full text-[11px] absolute top-3 left-5'>{wish.length}</span></div>
                     </NavLink>
                   <NavLink to='/cart'>
-                  <div className=' h-auto w-auto flex relative'><HiOutlineShoppingBag className=' w-7 h-7'/><span className=' bg-black text-white w-4 h-4 grid place-items-center rounded-full text-[11px] absolute top-3 left-5'>3</span></div>
+                  <div className=' h-auto w-auto flex relative'><HiOutlineShoppingBag className=' w-7 h-7'/><span className=' bg-red-500 text-white w-4 h-4 grid place-items-center rounded-full text-[11px] absolute top-3 left-5'>{cart.length}</span></div>
                   </NavLink>
                   <NavLink to='/'>
                       <div className=' relative'><HiOutlineLockClosed className=' w-7 h-7  ' onClick={()=>{setProfileDropdawn(true)}}/>

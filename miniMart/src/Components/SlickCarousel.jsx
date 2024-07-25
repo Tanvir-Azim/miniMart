@@ -9,15 +9,20 @@ import { CiHeart } from "react-icons/ci";
 import { TbCurrencyTaka } from "react-icons/tb";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { IoMdHeart } from "react-icons/io";
 
 import Star from './Star';
 import Slider from "react-slick";
+import { useCardContax } from './CartContax';
+
 
 
 
 function SlickCarousel(props) {
   const bestSellerProduct = props.miniproduct
+  const{AddCartData,AddToWish,viewButton}=useCardContax()
    //const{bestSellerProduct}=useProductContax()
+   const quantity = 1
 
    const Wraper = styled.section`
 
@@ -46,22 +51,53 @@ function SlickCarousel(props) {
 
   
     display:  flex;
-    background-color:gray;
+    background-color:wheat;
+    border: 1px solid red;
+    border-radius: 100%;
     width:50px;
     height: 50px;
     border-radius: 100%;
-    color:red;
+    color:wheat;
   
    
    }
+   button.slick-arrow.slick-next:hover{
+    background-color:white;
+   }
+   .slick-prev:before, .slick-next:before{
+    color: red;
+   }
    button{
-    background-color:gray;
+    background-color:wheat;
     width:50px;
     height: 50px;
     border-radius: 100%;
-  
-    
+    color:white;
+    border: 1px solid red;
+    border-radius:100%;
    }
+
+
+ 
+
+   .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before{
+    opacity:1;
+   }
+
+   .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before{
+   color: red;
+   }
+
+   .slick-prev:before, .slick-next:before{
+    opacity: 1;
+   }
+
+   .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    background:white;
+    border: 1px solid red;
+}
+  
+
    `
      var settings = {
       dots: false,
@@ -138,55 +174,59 @@ function SlickCarousel(props) {
                    
                    bestSellerProduct.map((curElement)=>{
                     
-                     return (
-                     <NavLink to={`/singleproductpage/${curElement.id}`}>
-                     <div className='w-[200p] grid place-items-center'> {/* card dov air width*/}
-                         
-                         <div>
-                         
-                          
-                            <ul className='main w-[200px] h-[260px]  '>{/*card air name price air div*/}
-                                <li>
-                                <div>
-                                   <img src={curElement.image} className=' w-[230px] h-[170px]' />
-                                   </div>
-                                   
-                                   <li className='menu'>
-                                     <div className=' flex  w-full h-full items-center '>
-                                     <NavLink to='/cart'>
-                                         <div className=' w-[130px] h-[35px]  border-[1px] border-gray-400 flex items-center justify-evenly hover:text-red-500 '>
+                     return ( 
+                      <>        
+                        <NavLink to={`/singleproductpage/${curElement.id}`}>
+                        <div className='w-[200p] grid place-items-center'> {/* card dov air width*/}
+                      
+                        <div>
+                      
+                       
+                         <ul className='main w-[200px] h-[260px] '>{/*card air name price air div*/}
+                             <li>
+                                <img src={curElement.image} className='img w-[200px] h-[170px] xl:w-[170px] md:w-[130px] lg:w-[50px] lg:h-[60px] '/>
+                                
+                                <li className='menu'>
+                                  <div className=' flex  w-full h-full items-center'>
+                                  <div onClick={()=>{AddCartData(curElement,quantity,curElement.colors[0])}}>
+                                      <NavLink to='/cart'>
+                                          <div className=' w-[130px] h-[35px]  bg-white text-red border-[1px] border-red-500   flex items-center text-red-500 font-semibold justify-evenly hover:bg-white hover:text-black ' >
                                       
                                              <div>
                                                <HiOutlineShoppingBag className=' text-[20px]'/>
-                                            </div>
-                                         
+                                             </div>
+                                      
                                              <div>
                                                <p className=' text-sm'>Add To Cart</p>
                                              </div>
+                                     
                                         
-                                          
-                                         </div>
+                                           </div>
                                        </NavLink>
-                                       <div className=' w-[70px] h-[35px] flex justify-center items-center'>
-                                       <NavLink to='/heart'>
-                                           <div className=' w-9 h-[35px] grid place-items-center border-[1px] border-gray-400'> <CiHeart className=' text-[23px] hover:text-red-500 '/></div>
-                                       </NavLink>
-                                       <NavLink to='/dtailproduct'>
-                                         <div className=' w-9 h-[35px]  grid place-items-center border-[1px] border-gray-400'><FaRegEye className=' text-[20px] hover:text-red-500 '/></div>
-                                         </NavLink>
-                                       </div>
-                                      
-                                     </div>
-                                   </li>
-                                   <p className=' grid place-items-center w-full h-full'>{<Star className='grid place-items-center' star={curElement.stars}/>}</p>
-                                   <p className=' text-[14px] grid place-items-center font-bold text-gray-500' >{curElement.name}</p>
-                                   <p className=' grid place-items-center'><span className=' flex items-center'>{curElement.price}<TbCurrencyTaka/></span></p>
-                               </li>
-                           </ul> 
-    
-                         </div>
-                         </div>
-                         </NavLink>
+                                      </div>
+                                   
+                                    <div className=' w-[70px] h-[35px] flex justify-center items-center  bg-white text-red-500  '>
+                                    
+                                        <div className=' w-9 h-[35px] grid place-items-center border-[1px] border-red-500 border-l-0' onClick={()=>{AddToWish(curElement)}}><NavLink to='/heart'> <IoMdHeart className=' text-[23px] hover:text-black text-red font-bold '/> </NavLink></div>
+                                   
+                                    
+                                      <div className=' w-9 h-[35px]  grid place-items-center border-[1px] border-red-500 border-l-0' onClick={()=>{viewButton(curElement)}}><NavLink to='/dtailproduct'><FaRegEye className=' text-[20px] hover:text-black text-red font-bold '/> </NavLink></div>
+                                     
+                                    </div>
+                                   
+                                  </div>
+                                </li>
+                                <p className=' grid place-items-center w-full h-full'>{<Star className='grid place-items-center' star={curElement.stars}/>}</p>
+                                <p className=' text-[14px] grid place-items-center font-bold text-gray-500' >{curElement.name}</p>
+                                <p className=' grid place-items-center'><span className=' flex items-center text-red-500 font-bold'>{curElement.price}<TbCurrencyTaka className=' font-bold text-lg'/></span></p>
+                            </li>
+                        </ul> 
+ 
+                      </div>
+                      </div>
+                      </NavLink>
+                      </>
+
                      )
                    })
                  

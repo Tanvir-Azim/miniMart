@@ -15,6 +15,7 @@ const initialState={
     miniFeatured:[],
     saleProduct:[],
     topRate:[],
+    h2Banner:[],
 
     feature:true,
     latest:false,
@@ -100,6 +101,11 @@ useEffect(()=>{
    
     dispath({
         type:"topRate"
+    })
+},[])
+useEffect(()=>{
+    dispath({
+        type:"h2_LOADING"
     })
 },[])
 

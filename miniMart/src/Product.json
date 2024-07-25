@@ -22,6 +22,7 @@
         "comment":12,
         "share":10,
         "discount":1000.00,
+        "available":true,
         "images":[
             {
                 "id": "randomid1",
@@ -111,6 +112,7 @@
         "comment":15,
         "discount":1200.00,
         "share":12,
+        "available":true,
         "images":[
             {
                 "id": "randomid1",
@@ -198,6 +200,7 @@
         "comment":10,
         "share":6,
         "discount":800.00,
+        "available":false,
         "images":[
             {
                 "id": "randomid1",
@@ -284,6 +287,7 @@
             "comment":10,
             "share":8,
             "discount":2000.00,
+            "available":true,
             "images":[
                 {
                     "id": "randomid1",
@@ -365,6 +369,7 @@
                 "featured":true,
                 "shipping": true,
                 "bestseller":true,
+                "available":true,
                 "like":26,
                 "comment":12,
                 "share":5,
@@ -458,6 +463,7 @@
                         "comment":12,
                         "share":10,
                         "discount":1300.00,
+                        "available":false,
                         
                         "images":[
                             {
@@ -545,6 +551,7 @@
                                 "like":20,
                                 "comment":12,
                                 "share":10,
+                                "available":true,
                                 "images":[
                                     {
                                         "id": "randomid1",
@@ -623,7 +630,7 @@
                                 "#000000",
                                 "#CDD0D0"
                                 ],
-                                "image":"/images/HomePage1/h1feature8.jpg",
+                                "image":"/images/HomePage1/h1feature2.jpg",
                                 "description": "The large coffee table measures 19.7”Dia. x 15.7”H and the small coffee table measures 15.7”Dia. x 14.2”H; the compact size suitable for small spaces allows you to find the right place for afternoon tea, decorations, or a laptop for work",
                                 "description2":"The mix of quality particleboard and sturdy steel frame makes this side table set stable so that it won't wobble every time you pick up your coffee cup. Each small table can support up to 44 lb",
                                 "featured":false,
@@ -636,6 +643,7 @@
                                 "comment":12,
                                 "share":10,
                                 "discount":3000.00,
+                                "available":true,
                                 "images":[
                                     {
                                         "id": "randomid1",
@@ -718,6 +726,7 @@
                             "latest":true,
                             "minibestseller":true,
                             "discount":20000,
+                            "available":false,
                             "stock": 5,
                                 "reviews": 68,
                                 "stars": 3.8,
@@ -816,6 +825,7 @@
                                     "like":20,
                                     "comment":12,
                                     "share":10,
+                                    "available":true,
                                     "images":[
                                         {
                                             "id": "randomid1",
@@ -910,6 +920,7 @@
                                         "like":20,
                                         "comment":12,
                                         "share":10,
+                                        "available":true,
                                         "images":[
                                             {
                                                 "id": "randomid1",
@@ -992,6 +1003,7 @@
                                         "latest":true,
                                         "saleProduct":true,
                                         "discount":20000,
+                                        "available":false,
                                         "stock": 5,
                                             "reviews":32,
                                             "stars": 4.5,
@@ -1078,6 +1090,7 @@
                                             "latest":true,
                                             "minibestseller":true,
                                             "discount":20000,
+                                            "available":true,
                                             "stock": 5,
                                                 "reviews":32,
                                                 "stars": 4.0,
@@ -1163,6 +1176,7 @@
                                             "bestseller":true,
                                             "saleProduct":true,
                                             "discount":20000,
+                                            "available":true,
                                             "stock": 5,
                                                 "reviews":32,
                                                 "stars": 4.0,
@@ -1244,6 +1258,7 @@
                                              "description2":"Space-Saving Design: Perfect for small spaces like apartments, dorms, or home offices, offering a practical and efficient workstation solution.",
                                             "category": "Table",
                                             "shipping": true,
+                                            "available":false,
                                            
                                             "latest":true,
                                             "minibestseller":true,
@@ -1329,6 +1344,7 @@
                                              "description2":"Space-Saving Design: Perfect for small spaces like apartments, dorms, or home offices, offering a practical and efficient workstation solution.",
                                             "category": "Table",
                                             "shipping": true,
+                                            "available":true,
                                             "latest":true,
                                             "discount":20000,
                                             "bestseller":true,
@@ -1394,13 +1410,344 @@
                                                     "size": 1080,
                                                     "type": "image/jpg"
                                                     }
-        
-                                            
-                                                    
+          
                                                 
                                                 ]
             
                                             
-                                            }            
+                                            },
+                                            {  
+                                                
+                                            "id": "thapaserialoq",
+                                            "name": "Wall Sconce Lamp",
+                                            "price": 9000,
+                                            "available":false,
+                                            "colors": [
+                                            "#000",
+                                            "#22D3EF"
+                                            ],
+                                            "image": "/images/HomePage2/h2banner1.jpeg",
+                                             "description":"CREATIVE DESIGN: Designer's perfect design, Nordic Japanese style, modern wall lamp, add more features to your home.",
+                                             "description2":"DURABLE MATERIAL: Bright brass swing arm wall sconce body with white ceramic shade and wood grain color base, easy to clean and won't rust, it's a premium wall sconce.",
+                                            "category": "Table",
+                                            "shipping": true,
+                                            "discount":11000,
+                                           "h2banner":true,
+                                            "stock": 5,
+                                                "reviews":32,
+                                                "stars": 4.0,
+                                                "like":20,
+                                                "comment":12,
+                                                "share":10,
+                                                "images":[
+                                                    {
+                                                        "id": "randomid1",
+                                                        "width": 1080,
+                                                        "height": 650,
+                                                        "url":"/images/HomePage2/h2bannermini1.jpg",
+                                                        "filename": "prod-2.png",
+                                                        "size": 1080,
+                                                        "type": "image/jpg"
+                                                    },
+                                                    {
+                                                    "id": "randomid2",
+                                                    "width": 1080,
+                                                    "height": 650,
+                                                    "url":"/images/HomePage2/h2bannermini2.jpg",
+                                                    "filename": "prod-2.png",
+                                                    "size": 1080,
+                                                    "type": "image/jpg"
+                                                    },
+                                                    {
+                                                    "id": "randomid3",
+                                                    "width": 1080,
+                                                    "height": 650,
+                                                    "url":"/images/HomePage2/h2bannermini3.jpg",
+                                                    "filename": "prod-3.png",
+                                                    "size": 1080,
+                                                    "type": "image/jpg"
+                                                    },
+                                                    {
+                                                    "id": "randomid4",
+                                                    "width": 1080,
+                                                    "height": 650,
+                                                    "url":"/images/HomePage2/h2bannermini4.jpg",
+                                                    "filename": "prod-4.png",
+                                                    "size": 1080,
+                                                    "type": "image/jpg"
+                                                    },
+                                                    {
+                                                        "id": "randomid5",
+                                                        "width": 1080,
+                                                        "height": 650,
+                                                        "url":"/images/HomePage2/h2bannermini1.jpg",
+                                                        "filename": "prod-2.png",
+                                                        "size": 1080,
+                                                        "type": "image/jpg"
+                                                    },
+                                                    {
+                                                    "id": "randomid6",
+                                                    "width": 1080,
+                                                    "height": 650,
+                                                    "url": "/images/HomePage2/h2bannermini2.jpg",
+                                                    "filename": "prod-2.png",
+                                                    "size": 1080,
+                                                    "type": "image/jpg"
+                                                    }
+          
+                                                
+                                                ]
+            
+                                            
+                                            },
+                                            {  
+                                            "id": "thapaserialor",
+                                            "name": "Wall Sconce Lamp",
+                                            "price": 9000,
+                                            "available":true,
+                                            "colors": [
+                                            "#000",
+                                            "#22D3EF"
+                                            ],
+                                            "image": "/images/HomePage2/h2banner2.jpeg",
+                                             "description":"CREATIVE DESIGN: Designer's perfect design, Nordic Japanese style, modern wall lamp, add more features to your home.",
+                                             "description2":"DURABLE MATERIAL: Bright brass swing arm wall sconce body with white ceramic shade and wood grain color base, easy to clean and won't rust, it's a premium wall sconce.",
+                                            "category": "Table",
+                                            "discount":11000,
+                                            "h2banner":true,
+                                            "stock": 5,
+                                                "reviews":32,
+                                                "stars": 4.0,
+                                                "like":20,
+                                                "comment":12,
+                                                "share":10,
+                                                "images":[
+                                                    {
+                                                        "id": "randomid1",
+                                                        "width": 1080,
+                                                        "height": 650,
+                                                        "url":"/images/HomePage2/h2banner2mini1.jpg",
+                                                        "filename": "prod-2.png",
+                                                        "size": 1080,
+                                                        "type": "image/jpg"
+                                                    },
+                                                    {
+                                                    "id": "randomid2",
+                                                    "width": 1080,
+                                                    "height": 650,
+                                                    "url":"/images/HomePage2/h2banner2mini3.jpg",
+                                                    "filename": "prod-2.png",
+                                                    "size": 1080,
+                                                    "type": "image/jpg"
+                                                    },
+                                                    {
+                                                    "id": "randomid3",
+                                                    "width": 1080,
+                                                    "height": 650,
+                                                    "url":"/images/HomePage2/h2banne2rmini4.jpg",
+                                                    "filename": "prod-3.png",
+                                                    "size": 1080,
+                                                    "type": "image/jpg"
+                                                    },
+                                                    {
+                                                    "id": "randomid4",
+                                                    "width": 1080,
+                                                    "height": 650,
+                                                    "url":"/images/HomePage2/h2banner2mini5.jpg",
+                                                    "filename": "prod-4.png",
+                                                    "size": 1080,
+                                                    "type": "image/jpg"
+                                                    },
+                                                    {
+                                                        "id": "randomid5",
+                                                        "width": 1080,
+                                                        "height": 650,
+                                                        "url":"/images/HomePage2/h2banner2mini6.jpg",
+                                                        "filename": "prod-2.png",
+                                                        "size": 1080,
+                                                        "type": "image/jpg"
+                                                    },
+                                                    {
+                                                    "id": "randomid6",
+                                                    "width": 1080,
+                                                    "height": 650,
+                                                    "url": "/images/HomePage2/h2banner2mini1.jpg",
+                                                    "filename": "prod-2.png",
+                                                    "size": 1080,
+                                                    "type": "image/jpg"
+                                                    }
+          
+                                                
+                                                ]
+            
+                                            
+                                            },
+                                            {  
+                                                "id": "thapaserialos",
+                                                "name": "Blue Fabric Dining Chairs",
+                                                "price": 8000,
+                                                "available":false,
+                                                "colors": [
+                                                "#000",
+                                                "#22D3EF"
+                                                ],
+                                                "image": "/images/HomePage2/h2banner3.jpeg",
+                                                 "description":"Stylish Comfort: These vidaXL dining chairs, upholstered in vibrant blue fabric, make a stylish, comfortable addition to any dining room or living space",
+                                                 "description2":"Padded Comfort: Our chairs feature high-density foam padding in the seat, armrests, and backrest, creating an inviting, comfortable seating experience",
+                                                "category": "Table",
+                                                "shipping": true,
+                                                "discount":10000,
+                                                "h2banner":true,
+                                                "stock": 5,
+                                                    "reviews":32,
+                                                    "stars": 4.0,
+                                                    "like":20,
+                                                    "comment":12,
+                                                    "share":10,
+                                                    "images":[
+                                                        {
+                                                            "id": "randomid1",
+                                                            "width": 1080,
+                                                            "height": 650,
+                                                            "url":"/images/HomePage2/h2banner3mini1.jpg",
+                                                            "filename": "prod-2.png",
+                                                            "size": 1080,
+                                                            "type": "image/jpg"
+                                                        },
+                                                        {
+                                                        "id": "randomid2",
+                                                        "width": 1080,
+                                                        "height": 650,
+                                                        "url":"/images/HomePage2/h2banner3.jpeg",
+                                                        "filename": "prod-2.png",
+                                                        "size": 1080,
+                                                        "type": "image/jpg"
+                                                        },
+                                                        {
+                                                        "id": "randomid3",
+                                                        "width": 1080,
+                                                        "height": 650,
+                                                        "url":"/images/HomePage2/h2banner3mini2.jpg",
+                                                        "filename": "prod-3.png",
+                                                        "size": 1080,
+                                                        "type": "image/jpg"
+                                                        },
+                                                        {
+                                                        "id": "randomid4",
+                                                        "width": 1080,
+                                                        "height": 650,
+                                                        "url":"/images/HomePage2/h2banner3mini3.jpg",
+                                                        "filename": "prod-4.png",
+                                                        "size": 1080,
+                                                        "type": "image/jpg"
+                                                        },
+                                                        {
+                                                            "id": "randomid5",
+                                                            "width": 1080,
+                                                            "height": 650,
+                                                            "url":"/images/HomePage2/h2banner3mini1.jpg",
+                                                            "filename": "prod-2.png",
+                                                            "size": 1080,
+                                                            "type": "image/jpg"
+                                                        },
+                                                        {
+                                                        "id": "randomid6",
+                                                        "width": 1080,
+                                                        "height": 650,
+                                                        "url": "/images/HomePage2/h2banner3mini1.jpg",
+                                                        "filename": "prod-2.png",
+                                                        "size": 1080,
+                                                        "type": "image/jpg"
+                                                        }
+              
+                                                    
+                                                    ]
+                
+                                                
+                                                },
+                                                {  
+                                                "id": "thapaserialot",
+                                                "available":false,
+                                                "name": "Blue Fabric Dining Chairs",
+                                                "price": 8000,
+                                                "colors": [
+                                                "#000",
+                                                "#22D3EF"
+                                                ],
+                                                "image": "/images/HomePage2/h2banner4.jpeg",
+                                                 "description":"Stylish Comfort: These vidaXL dining chairs, upholstered in vibrant blue fabric, make a stylish, comfortable addition to any dining room or living space",
+                                                 "description2":"Padded Comfort: Our chairs feature high-density foam padding in the seat, armrests, and backrest, creating an inviting, comfortable seating experience",
+                                                "category": "Table",
+                                                "shipping": true,
+                                                "discount":10000,
+                                                "h2banner":false,
+                                                "stock": 5,
+                                                    "reviews":32,
+                                                    "stars": 4.0,
+                                                    "like":20,
+                                                    "comment":12,
+                                                    "share":10,
+                                                    "images":[
+                                                        {
+                                                            "id": "randomid1",
+                                                            "width": 1080,
+                                                            "height": 650,
+                                                            "url":"/images/HomePage2/h2banner4mini1.jpg",
+                                                            "filename": "prod-2.png",
+                                                            "size": 1080,
+                                                            "type": "image/jpg"
+                                                        },
+                                                        {
+                                                        "id": "randomid2",
+                                                        "width": 1080,
+                                                        "height": 650,
+                                                        "url":"/images/HomePage2/h2banner4mini2.jpg",
+                                                        "filename": "prod-2.png",
+                                                        "size": 1080,
+                                                        "type": "image/jpg"
+                                                        },
+                                                        {
+                                                        "id": "randomid3",
+                                                        "width": 1080,
+                                                        "height": 650,
+                                                        "url":"/images/HomePage2/h2banner4mini3.jpg",
+                                                        "filename": "prod-3.png",
+                                                        "size": 1080,
+                                                        "type": "image/jpg"
+                                                        },
+                                                        {
+                                                        "id": "randomid4",
+                                                        "width": 1080,
+                                                        "height": 650,
+                                                        "url":"/images/HomePage2/h2banner4mini4.jpg",
+                                                        "filename": "prod-4.png",
+                                                        "size": 1080,
+                                                        "type": "image/jpg"
+                                                        },
+                                                        {
+                                                            "id": "randomid5",
+                                                            "width": 1080,
+                                                            "height": 650,
+                                                            "url":"/images/HomePage2/h2banner4mini5.jpg",
+                                                            "filename": "prod-2.png",
+                                                            "size": 1080,
+                                                            "type": "image/jpg"
+                                                        },
+                                                        {
+                                                        "id": "randomid6",
+                                                        "width": 1080,
+                                                        "height": 650,
+                                                        "url": "/images/HomePage2/h2banner4mini6.jpg",
+                                                        "filename": "prod-2.png",
+                                                        "size": 1080,
+                                                        "type": "image/jpg"
+                                                        }
+              
+                                                    
+                                                    ]
+                
+                                                
+                                                }                                  
+                                 
                      
 ]

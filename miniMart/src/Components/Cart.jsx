@@ -5,15 +5,19 @@ import { FaMinus, FaTruck } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
 import { FaTrash } from "react-icons/fa";
 import { TbCurrencyTaka } from "react-icons/tb";
+import { NavLink } from 'react-router-dom';
 
 function Cart() {
 
-  const {cart,RemoveCartData,Increment,Decrement}=useCardContax()
+  const {cart,RemoveCartData,Increment,Decrement,totalPrice}=useCardContax()
+  console.log(totalPrice)
   console.log(cart)
   if(cart.length==[]){
     return(
       <>
-      <Header/>
+      <div className=' h-16 w-full'>
+        <Header/>
+      </div>
       <div className=' text-2xl flex place-items-center justify-center w-full h-[600px]'>
           No Cart In Item
       </div>
@@ -26,7 +30,9 @@ function Cart() {
 
   return (
  <>
- <Header/>
+      <div className=' h-16 w-full'>
+        <Header/>
+      </div>
 
  
 <div className='flex w-[80%]  justify-around mx-auto '>
@@ -104,7 +110,7 @@ function Cart() {
         <p  className='text-[16px] font-medium'>Subtotal</p>
         <div className='flex items-center'>
           <TbCurrencyTaka className='text-xl'/>
-          <p className='text-[16px] font-bold'>2000</p>
+          <p className='text-[16px] font-bold'>{totalPrice}</p>
           
         </div>
     </div>
@@ -122,7 +128,7 @@ function Cart() {
         <p  className='text-[16px] font-bold'>Total</p>
         <div className='flex items-center'>
            <TbCurrencyTaka className='text-xl'/>
-          <p className='text-[16px] font-bold'>20000</p> 
+          <p className='text-[16px] font-bold'>{totalPrice}</p> 
         </div>
        
       
@@ -131,9 +137,11 @@ function Cart() {
        <input type='text' placeholder='Coupon'  className=' border-2 border-red-500 w-[70%] h-full rounded-[2px] outline-none placeholder:pl-3'/>
        <button className='bg-red-500 h-[40px] w-[90px] font-semibold text-white flec items-center hover:bg-white hover:border-red-500 hover:border-[2px] hover:text-red-500 hover:border-l-0  hover:border-r-0'>Apply</button>
     </div>
-    <div className=' w-full  h-[50px] '>
-       <button className='w-full h-full text-[13px] bg-red-500 uppercase rounded-[2px] text-white font-bold  hover:border-red-500 hover:border-[2px] hover:text-red-500  hover:bg-white'>Process to Checkout</button>
-    </div>
+    <NavLink to='/checkoutpage'>
+      <div className=' w-full  h-[50px] '>
+        <button className='w-full h-full text-[13px] bg-red-500 uppercase rounded-[2px] text-white font-bold  hover:border-red-500 hover:border-[2px] hover:text-red-500  hover:bg-white'>Process to Checkout</button>
+      </div>
+    </NavLink>
     
    
   </div>
@@ -149,7 +157,7 @@ function Cart() {
      <h1 className='text-[18px] text-gray-800 font-bold'>ODER SUMMUARY</h1>
    
      <div className=' flex w-full h-[10px] justify-between items-center'>
-        <p  className='text-[16px] font-medium'>Subtotal</p>
+        <p  className='text-[16px] font-medium'>{totalPrice}</p>
         <div className='flex items-center'>
           <TbCurrencyTaka className='text-xl'/>
           <p className='text-[16px] font-bold'>2000</p>
@@ -170,7 +178,7 @@ function Cart() {
         <p  className='text-[16px] font-bold'>Total</p>
         <div className='flex items-center'>
            <TbCurrencyTaka className='text-xl'/>
-          <p className='text-[16px] font-bold'>20000</p> 
+          <p className='text-[16px] font-bold'>{totalPrice}</p> 
         </div>
        
       
@@ -179,10 +187,11 @@ function Cart() {
        <input type='text' placeholder='Coupon'  className=' border-2 border-red-500 w-[70%] h-full rounded-[2px] outline-none placeholder:pl-3'/>
        <button className='bg-red-500 h-[40px] w-[90px] font-semibold text-white flec items-center hover:bg-white hover:border-red-500 hover:border-[2px] hover:text-red-500 hover:border-l-0  hover:border-r-0'>Apply</button>
     </div>
-    <div className=' w-full  h-[50px] '>
-       <button className='w-full h-full text-[13px] bg-red-500 uppercase rounded-[2px] text-white font-bold  hover:border-red-500 hover:border-[2px] hover:text-red-500  hover:bg-white'>Process to Checkout</button>
-    </div>
-    
+    <NavLink to='/checkoutpage'>
+      <div className=' w-full  h-[50px] '>
+        <button className='w-full h-full text-[13px] bg-red-500 uppercase rounded-[2px] text-white font-bold  hover:border-red-500 hover:border-[2px] hover:text-red-500  hover:bg-white'>Process to Checkout</button>
+      </div>
+    </NavLink>
    
   </div>
   </div>

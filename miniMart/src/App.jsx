@@ -43,6 +43,7 @@ import ErrorPage from "./Components/ErrorPage"
 import GridView from "./Components/GridView"
 import ListView from "./Components/ListView"
 import LoginPage from "./Components/LoginPage"
+import CheckOutPage from "./Components/CheckOutPage"
 
 
 function App() {
@@ -94,6 +95,7 @@ function App() {
         <Route path="/gridview" element={<GridView/>}/>
         <Route path="/listview" element={<ListView/>}/>
         <Route path="/loginpage" element={<LoginPage/>}/>
+        <Route path="/checkoutpage" element={<CheckOutPage/>}/>
             
       </Routes>
     </BrowserRouter>

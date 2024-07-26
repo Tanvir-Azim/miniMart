@@ -17,7 +17,9 @@ function HomePage1() {
 
   return (
     <>
-        <Header/>
+         <div className=' h-16 w-full'>
+            <Header/>
+        </div>
         <HeroSection/>
         <HeroSectionContentPart/>
         <FeatureTitle/>

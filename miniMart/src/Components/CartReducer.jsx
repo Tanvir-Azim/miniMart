@@ -156,9 +156,31 @@ const CartReducer=(state,action)=>{
        
     }
        
+    if(action.type === "TOTAL_ITEM"){
+        let TotalItem=state.cart.reduce((initialVal,curElem)=>{
+            let amount = curElem.quantity
+            initialVal = initialVal+amount
+            return initialVal
+        },0)
+        return{
+            ...state,
+            totalItem:TotalItem
+        }
+    }
 
-   
+    if(action.type === "TOTAL_PRICE"){
+        let totalPrice = state.cart.reduce((initialVal,curElem)=>{
+            let price = curElem.quantity*curElem.price
+            initialVal = initialVal+price
+            return initialVal
+        },0)
+        return{
+            ...state,
+            totalPrice:totalPrice
+        }
+    }
     return state
+   
 
 }
 

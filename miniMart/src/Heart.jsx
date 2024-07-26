@@ -25,9 +25,11 @@ function Heart() {
   
   return (
     <>
-    <Header/>
+    <div className=' h-16 w-full'>
+      <Header/>
+    </div>
 
-    <div className=' w-[75%] h-full mt-5 mx-auto '>
+    <div className=' w-[75%] h-full mx-auto '>
 
       {
       wish.map((curElement)=>{

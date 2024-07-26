@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useReducer,useEffect } from 'react'
 import reducer from './CartReducer'
+import {toast } from 'react-toastify';
 
 
 const CardContax=createContext()
@@ -26,12 +27,17 @@ const initialState={
     cart:getLocalStorage(),
     wish:getLocalStorageWish(),
     viewProduct:[],
+    totalItem:"",
+    totalPrice:""
 }
+
+
 function CartContax({children}) {
 
     const[state,dispatch]=useReducer(reducer,initialState)
 
     const AddToCart=(product,quantity,color)=>{
+      toast.success('Product added to cart');
         dispatch({
             type:"ADD_TO_CART",
             payload:{product,quantity,color}
@@ -39,12 +45,15 @@ function CartContax({children}) {
         
     }
     const AddCartData=(product,quantity,color)=>{
+      toast.success('Product added to cart');
       dispatch({
         type:"ADD_CART",
         payload:{product,quantity,color}
     })
+    
     }
     const AddToWish=(product)=>{
+      toast.success('Product added to Wish');
       dispatch({
         type:"ADD_To_Wish",
         payload:product
@@ -58,6 +67,7 @@ function CartContax({children}) {
     }
 
     const WistToCart=(product,quantity,color)=>{
+      toast.success('Product added to cart');
       dispatch({
         type:"WISH_TO_CART",
         payload:{product,quantity,color}
@@ -66,6 +76,7 @@ function CartContax({children}) {
     }
 
     const RemoveWish=(id)=>{
+      toast.error('Wish product deleted');
       dispatch({
         type:"REMOVE_WISH",
         payload:id
@@ -73,6 +84,7 @@ function CartContax({children}) {
     }
 
     const RemoveCartData=(id)=>{
+      toast.error('Product Deleted');
       dispatch({
         type:"REMOVE_CART",
         payload:id
@@ -80,6 +92,9 @@ function CartContax({children}) {
     }
 
     useEffect(()=>{
+      dispatch({
+        type:"TOTAL_ITEM",
+    })
         localStorage.setItem('cartdata',JSON.stringify(state.cart))
     },[state.cart])
 
@@ -101,6 +116,12 @@ function CartContax({children}) {
       payload:id
     })
   }
+  useEffect(()=>{
+      dispatch({
+        type:"TOTAL_PRICE"
+      })
+  },[state.cart])
+
   return (
     <CardContax.Provider value={{...state,AddToCart,AddCartData,AddToWish,viewButton,WistToCart,RemoveWish,RemoveCartData,Increment,Decrement}}>
             {children}

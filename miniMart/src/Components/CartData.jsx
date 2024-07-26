@@ -32,7 +32,7 @@ function CartData({product}) {
         colors.map((curColor)=>{
           
           return <button style={{backgroundColor:curColor}} className=" h-5 w-5 rounded-full grid place-items-center" onClick={()=>{setColor(curColor)}}>
-            {color===curColor?<FaCheck className=" text-blue-600 text-xs"/>:null}
+            {color===curColor?<FaCheck className=" text-white text-xs"/>:null}
           </button>
         })
       }

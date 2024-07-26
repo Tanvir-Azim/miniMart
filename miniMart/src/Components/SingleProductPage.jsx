@@ -57,7 +57,9 @@ const Wraper = styled.section`
 
   return (
     <>
-    <Header/>
+    <div className=' h-16 w-full'>
+      <Header/>
+    </div>
      <div className=' w-[100%] h-[90vh] b-red-300 grid grid-cols-2 grid-rows-1 md:grid-cols-[500px] md:grid-rows-[500px 500px]   md:h-[250vh] md:flex md:flex-col   md:items-center sm:h-[240vh] sm:flex sm:flex-col   sm:items-center xs:h-[240vh] xs:flex xs:flex-col   xs:items-center'>
         <div className='bg-white'>
         <div  className=''></div>

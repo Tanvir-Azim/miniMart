@@ -9,16 +9,12 @@ import { IoMdHeart } from "react-icons/io";
 import { TbCurrencyTaka } from "react-icons/tb";
 import Star from './Star';
 import { useCardContax } from './CartContax';
-//import { FaMinus, FaTruck } from "react-icons/fa";
-//import { FaPlus } from "react-icons/fa6";
 
 
 function AllProduct({product}) {
    const{AddCartData,AddToWish,viewButton}=useCardContax()
    const quantity = 1
-
- 
-
+  
 
    const Wraper = styled.section`
 
@@ -41,6 +37,8 @@ function AllProduct({product}) {
     
      visibility: visible;
    }
+   
+   
    `
    
     //lg:place-items-center  
@@ -68,7 +66,7 @@ function AllProduct({product}) {
                                    <li className='menu'>
                                      <div className=' flex  w-full h-full items-center'>
                                      <div onClick={()=>{AddCartData(curElement,quantity,curElement.colors[0])}}>
-                                         <NavLink to='/cart'>
+                                         <NavLink to='/product'>
                                              <div className=' w-[130px] h-[35px]  bg-white text-red border-[1px] border-red-500   flex items-center text-red-500 font-semibold justify-evenly hover:bg-white hover:text-black ' >
                                          
                                                 <div>
@@ -82,6 +80,7 @@ function AllProduct({product}) {
                                            
                                               </div>
                                           </NavLink>
+                                          
                                          </div>
                                       
                                        <div className=' w-[70px] h-[35px] flex justify-center items-center  bg-white text-red-500  '>

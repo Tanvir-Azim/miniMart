@@ -13,10 +13,10 @@ import ProfilePage from './ProfilePage';
 import { useCardContax } from './CartContax';
 
 
-
-
 function Header() {
-  const{cart,wish}=useCardContax()
+  const{cart,wish,totalItem}=useCardContax()
+ 
+
   
   const [showModal,setShowModal]=useState(false)
   const [profileDropdawn,setProfileDropdawn]=useState(false)
@@ -103,7 +103,7 @@ cursor: pointer;
   return (
     <>
     
-        <div className=' w-[100%] h-16 flex justify-between items-center mini:w-[360px]'>
+        <div className=' w-[100%] h-16 flex justify-between items-center mini:w-[360px] fixed bg-white'>
         
 
             <div className=' w-[300px] grid place-items-center lg:w-[200px] xs:w-[200px]'>
@@ -228,7 +228,7 @@ cursor: pointer;
                       <div className=' h-auto w-auto flex relative'><CiHeart className=' w-8 h-8'/><span className=' bg-red-500 text-white w-4 h-4 grid place-items-center rounded-full text-[11px] absolute top-3 left-5'>{wish.length}</span></div>
                     </NavLink>
                   <NavLink to='/cart'>
-                  <div className=' h-auto w-auto flex relative'><HiOutlineShoppingBag className=' w-7 h-7'/><span className=' bg-red-500 text-white w-4 h-4 grid place-items-center rounded-full text-[11px] absolute top-3 left-5'>{cart.length}</span></div>
+                  <div className=' h-auto w-auto flex relative'><HiOutlineShoppingBag className=' w-7 h-7'/><span className=' bg-red-500 text-white w-4 h-4 grid place-items-center rounded-full text-[11px] absolute top-3 left-5'>{totalItem}</span></div>
                   </NavLink>
                   <NavLink to='/'>
                       <div className=' relative'><HiOutlineLockClosed className=' w-7 h-7  ' onClick={()=>{setProfileDropdawn(true)}}/>

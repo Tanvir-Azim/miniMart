@@ -7,6 +7,8 @@ import OutOfStock from './Components/OutOfStock';
 import { TbCurrencyTaka } from "react-icons/tb";
 import { NavLink } from 'react-router-dom';
 import Empty from './Components/Empty';
+import { IoIosCall } from "react-icons/io";
+import { MdOutlineMail } from "react-icons/md";
 
 function Heart() {
   const {wish,WistToCart,RemoveWish}=useCardContax()
@@ -14,8 +16,6 @@ function Heart() {
   if(wish.length==[]){
     return(
       <>
-
-      <Header/>
       <div className=' text-2xl flex place-items-center justify-center w-full h-[600px]'>
           No Wish In Item
       </div>
@@ -26,7 +26,6 @@ function Heart() {
   return (
     <>
     <div className=' h-16 w-full'>
-      <Header/>
     </div>
 
     <div className=' w-[75%] h-full mx-auto '>

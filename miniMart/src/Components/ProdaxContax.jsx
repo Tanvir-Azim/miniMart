@@ -1,22 +1,21 @@
-import React, { createContext, useContext, useEffect, useReducer } from 'react'
+import React, { createContext, useContext, useEffect, useReducer, useState } from 'react'
 import Data from '../Product.json'
 import reducer from './ProductReducer'
 import FeatureProduct from './FeatureProduct'
 import LatestProduct from './LatestProduct'
 import { DiDart } from 'react-icons/di'
 import 'react-loading-skeleton/dist/skeleton.css'
+import Header from './Header'
 
 const initialState={
     product:[],
     featureProduct:[],
-    latestProduct:[],
     bestSellerProduct:[],
     hotSale:[],
     miniFeatured:[],
     saleProduct:[],
     topRate:[],
-    h2Banner:[],
-
+    h2Banner:[],    
     feature:true,
     latest:false,
     bestSeller:false
@@ -38,7 +37,6 @@ function ProdaxContax({children}) {
             payload:Data
         })
     },[])
-
 const getFeatureData=()=>{
   dispath({
     type:"FEATURE_VALUE"
@@ -108,6 +106,8 @@ useEffect(()=>{
         type:"h2_LOADING"
     })
 },[])
+
+
 
   return (
     <>

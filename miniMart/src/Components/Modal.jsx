@@ -1,105 +1,54 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { MdKeyboardArrowDown } from "react-icons/md";
-import HomeNavigation from './Navigation/HomeNavigation';
-import ProductNavigation from './Navigation/ProductNavigation';
-import BlogNavagate from './Navigation/BlogNavagate';
-import ContactNavation from './Navigation/ContactNavation';
+import styled from 'styled-components'
+import { useFilterContax } from './FilterContax'
+import { IoMdClose } from "react-icons/io";
 
 
 function Modal() {
-  const [showProduct,setShowProduct]=useState(false)
-
-  const [productData,setProductData]=useState(false)
-  const [blogDropdawn,setBlogDropdown]=useState(false)
-  const [contactDropdawn,setContactDropdawn]= useState(false)
- 
-
-
-  const HomeToggle=()=>{
-    setShowProduct(!showProduct)
-  }
-
-  const ProductToggle=()=>{
-    setProductData(!productData)
-  }
-
-  const BlogToggle=()=>{
-    setBlogDropdown(!blogDropdawn)
-  }
-
-  const ContactToggle=()=>{
-    setContactDropdawn(!contactDropdawn)
-  }
-
+  const{toggleHome,togglePages,toggleAbout,toggleBlog,toggleProducts,toggleContact,home,about,product,contact,pages,blog}=useFilterContax()
 
 
 
   return (
     
-    <>    
+    <> 
+
               <ul className=''>
 
                   <div className=' w-full h-full flex items-center'>
 
-                      <li onClick={()=>{HomeToggle()}} className=' text-[17px] relative  h-10 ml-5 flex items-center'><NavLink  to=''>HOME</NavLink>
-                        {showProduct && <HomeNavigation/>}
-                      </li>
-                      <div>
-                        <MdKeyboardArrowDown className=' text-[20px]'/>
-                      </div>
+                      <li onClick={()=>{toggleHome()}} className={home?'text-red-500 text-[17px] relative  h-10 ml-5 flex items-center':'text-[17px] relative  h-10 ml-5 flex items-center'}><NavLink  to='/'>HOME</NavLink></li>
+                      
                    </div>
                     <hr/>
                     <div className=' w-full h-full flex items-center'>
-                        <li onClick={()=>{ProductToggle()}}><NavLink  to='' className=' text-[17px] relative  h-10 ml-5 flex items-center'>PRODUCTS</NavLink>
-                        {productData && <ProductNavigation/>}
+                        <li onClick={()=>{toggleProducts()}}><NavLink  to='/product' className={product?' text-[17px] relative  h-10 ml-5 flex items-center text-red-500':'text-[17px] relative  h-10 ml-5 flex items-center'}>PRODUCTS</NavLink>
                         </li>
-
-                        <div>
-                        <MdKeyboardArrowDown className=' text-[20px]'/>
-                        </div>
                     </div>
                     
                     <hr/>
                     <div className=' w-full h-full flex items-center'>
-                        <li onClick={()=>{BlogToggle()}}><NavLink  to='' className=' text-[17px] relative  h-10 ml-5 flex items-center'> BLOG</NavLink>
-                        {blogDropdawn && <BlogNavagate/>}
-                        </li>
-
-                        <div>
-                        <MdKeyboardArrowDown className=' text-[20px]'/>
-                        </div>
+                        <li onClick={()=>{toggleBlog()}} ><NavLink  to='/blog' className={blog?' text-red-500 text-[17px] relative  h-10 ml-5 flex items-center':'text-[17px] relative  h-10 ml-5 flex items-center'}> BLOG</NavLink></li>
                     </div>
                     <hr/>
 
                      <div className=' w-full h-full flex items-center'>
-                        <li><NavLink  to='' className=' text-[17px] relative  h-10 ml-5 flex items-center'>PAGES</NavLink></li>
+                        <li onClick={()=>{togglePages()}}><NavLink  to='' className={pages?' text-[17px] relative  h-10 ml-5 flex items-center text-red-500':'ext-[17px] relative  h-10 ml-5 flex items-center'}>PAGES</NavLink></li>
 
-                        <div>
-                        <MdKeyboardArrowDown className=' text-[20px]'/>
-                        </div>
                     </div>
                     <hr/>
                     <div className=' w-full h-full flex items-center'>
-                        <li><NavLink  to='/about' className=' text-[17px] relative  h-10 ml-5 flex items-center'>ABOUT</NavLink></li>
-
-                        <div>
-                        <MdKeyboardArrowDown className=' text-[20px]'/>
-                        </div>
+                        <li onClick={()=>{toggleAbout()}}><NavLink  to='/about' className={about?' text-[17px] relative  h-10 ml-5 flex items-center text-red-500':'text-[17px] relative  h-10 ml-5 flex items-center'}>ABOUT</NavLink></li>
                     </div>
                     <hr/>
-                    <div className=' w-full h-full flex items-center'>
-                        <li onClick={()=>{ContactToggle()}}><NavLink  to='' className=' text-[17px] relative  h-10 ml-5 flex items-center'>CONTACT</NavLink>
-                        {contactDropdawn && <ContactNavation/>}
-                        </li>
-
-                        <div>
-                        <li><MdKeyboardArrowDown className=' text-[20px]'/></li>
-                        </div>
-                    </div>
+                      <div className=' w-full h-full flex items-center'>
+                        <li onClick={()=>{toggleContact()}}><NavLink  to='/contact' className={contact?' text-[17px] relative  h-10 ml-5 flex items-center text-red-500':' text-[17px] relative  h-10 ml-5 flex items-center'}>CONTACT</NavLink></li>
+                      </div>
                     <hr/>
 
               </ul>
+            
     </>
   )
 }

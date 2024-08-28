@@ -10,7 +10,7 @@ function MiniProduct({miniFeatured,hotSale, topRate,saleProduct}) {
    
 
   return (
-    <div className='w-[75%]  h-[65vh] grid grid-cols-4 grid-rows-1 mt-8 mx-auto md:grid-cols-2 md:grid-rows-[1fr 1fr] md:h-[125vh] lg:grid lg:grid-cols-3 lg:grid-rows-1 sm:grid-cols-2 sm:grid-rows-[1fr 1fr] sm:h-[120vh] xs:grid-cols-1 xs:grid-rows-4 xs:h-[210vh]'>
+    <div className=' w-[75%]  h-[65vh] grid grid-cols-4 grid-rows-1 mt-8 mx-auto md:grid-cols-2 md:grid-rows-[1fr 1fr] md:h-[125vh] lg:grid lg:grid-cols-3 lg:grid-rows-1 sm:grid-cols-2 sm:grid-rows-[1fr 1fr] sm:h-[120vh] xs:grid-cols-1 xs:grid-rows-4 xs:h-[250vh]'>
                      
         <div className=' '>
                 <h1 className=' font-bold text-xl text-gray-700'>Hot Sale</h1>
@@ -53,7 +53,7 @@ function MiniProduct({miniFeatured,hotSale, topRate,saleProduct}) {
         </div>
        
         <div className=''>
-                <h1 className=' font-bold text-xl text-gray-700'>Sale Products</h1>
+                <h1 className=' font-bold text-xl text-gray-700 '>Sale Products</h1>
             <div className=' w-full h-[400px] flex flex-col items-center'>
                 {
                     saleProduct.map((curElement)=>{

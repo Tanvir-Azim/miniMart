@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom'
 
 function PageContent() {
   return (
-    <div className=' relative bg-gray-300'>
-      <div className= ' absolute w-[1300px] h-[550px]  left-[3px] mt-6  bg-gray-300 '>
-        <div className=' h-8 w-8   rotate-45 absolute left-[887px] top-[-32px]  border-b-0 border-r-0 bg-gray-300'></div>
-        <div className='w-[1300px] h-[500px]  left-[3px] grid grid-cols-[1fr,1fr,1fr,1.3fr] grid-rows-1 mx-auto'>
+    <div className=' relative '>
+      <div className= ' absolute w-[1300px] h-[550px]  left-[3px] mt-4 shadow-2xl  border-[1px] border-gray-300  bg-white '>
+        <div className=' h-8 w-8   rotate-45 absolute left-[887px] top-[-18px]  border-b-0 border-r-0  border-[1px] border-gray-300'></div>
+        <div className='w-[1300px] h-[500px]  left-[3px] grid grid-cols-[1fr,1fr,1fr,1.3fr] grid-rows-1 mx-auto mt-4'>
           
             <div className=''>
             <h1 className=' font-semibold ml-8 text-gray-600'>SHOP PAGE</h1>

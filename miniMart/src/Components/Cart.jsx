@@ -10,14 +10,10 @@ import { NavLink } from 'react-router-dom';
 function Cart() {
 
   const {cart,RemoveCartData,Increment,Decrement,totalPrice}=useCardContax()
-  console.log(totalPrice)
-  console.log(cart)
   if(cart.length==[]){
     return(
       <>
-      <div className=' h-16 w-full'>
-        <Header/>
-      </div>
+
       <div className=' text-2xl flex place-items-center justify-center w-full h-[600px]'>
           No Cart In Item
       </div>
@@ -30,13 +26,10 @@ function Cart() {
 
   return (
  <>
-      <div className=' h-16 w-full'>
-        <Header/>
-      </div>
 
  
 <div className='flex w-[80%]  justify-around mx-auto '>
-  <div className='w-[70%] '>
+  <div className='w-[70%] xs:w-[85%] '>
   
       <div className=' w-[100%] h-[50px] grid grid-cols-[1.5fr,1fr,1fr,1fr,1fr] grid-rows-1 place-items-center border-[1px] bg-[#e1e0db] mx-auto mt-5 '>
         <div className='  w-[80px]  xs:ml-1 xs:w-[70px] font-semibold text-gray-800 '>Product</div>
@@ -51,21 +44,21 @@ function Cart() {
         cart.map((curElement)=>{
           return (
            <>
-           <div className=' w-[100%] h-[100px] grid grid-cols-[1.5fr,1fr,1fr,1fr,1fr] grid-rows-1 place-items-center border-[1px] border-gray-300 mx-auto mt-5 '>
-              <div>
-                <img src={curElement.image} className=' w-[80px] h-[80px] border-[1px] border-gray-300 xs:ml-1 xs:w-[70px] xs:h-[70px]'/>
+           <div className=' w-full h-[100px] flex justify-around items-center border-[1px] border-gray-300 mt-5'>
+           <div>
+                <img src={curElement.image} className='  w-[80px] h-[80px] xs:w-[70px] xs:h-[70px] border-[1px] border-gray-300 '/>
                 
               </div>
 
               <div className='w-[250px] sm:w-[140px] xs:w-[100px] xs:ml-3 md:w-[180px]'>
-                <p className=' font-bold text-gray-700 sm:text-sm xs:text-[11px]'>{curElement.name}</p>
+                <p className=' font-bold text-gray-700 sm:text-sm xs:text-[9px]'>{curElement.name}</p>
                 <div className='flex items-center mt-1 '>
-                  <p className=' font-bold text-base text-red-500 xs:text-xs sm:text-sm '>{curElement.price}</p>
-                  <TbCurrencyTaka className=' text-red-500 text-xl xs:text-sm'/>
+                  <p className=' font-bold text-base text-red-500 xs:text-xs xs:text-[10px] '>{curElement.price}</p>
+                  <TbCurrencyTaka className=' text-red-500 text-xl xs:text-[10px]'/>
                 </div>
-                <div className='flex w-[75px] h-7 items-center justify-between xs:text-xs sm:text-sm md:text-sm'>
+                <div className='flex w-[75px]  xs:w-[57px] place-items-center h-7 items-center justify-between xs:text-xs sm:text-sm md:text-sm'>
                     <p className=' font-bold text-gray-700'>Colors:</p>
-                      <p style={{backgroundColor:curElement.color}} className="h-4 w-4 rounded-full "></p>
+                      <p style={{backgroundColor:curElement.color}} className="h-4 w-4 xs:w-3 xs:h-3 rounded-full "></p>
                 </div>
               </div>
 

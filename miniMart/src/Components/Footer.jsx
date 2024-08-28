@@ -25,13 +25,13 @@ function Footer() {
   })
   return (
     <>
-    <div className=' h-[51vh] w-[100%] sm:h-[90vh] bg-gray-100   xs:h-[130vh] md:h-[85vh]  flex items-center flex-col'>
-      <div className=' w-[80%] h-[50vh] md:h-[80vh] sm:h-[80vh] bg-gray-100  grid grid-cols-4 grid-rows-1 place-items-center md:grid-rows-2 md:grid-cols-2 sm:grid-rows-2 sm:grid-cols-2 xs:grid-rows-4 xs:grid-cols-1 xs:mt-14 mx-auto xs:h-[120vh] gap-4 mt-5 '>
+    <div className=' h-[38vh] w-[100%] sm:h-[90vh] bg-gray-100  xs:h-[130vh] md:h-[85vh]  flex items-center flex-col mt-10'>
+      <div className=' w-[80%] h-[32vh] md:h-[80vh] sm:h-[80vh] bg-gray-100  grid grid-cols-4 grid-rows-1 place-items-center md:grid-rows-2 md:grid-cols-2 sm:grid-rows-2 sm:grid-cols-2 xs:grid-rows-4 xs:grid-cols-1 xs:mt-14 mx-auto xs:h-[120vh] gap-4 mt-10 '>
           <div className='  w-full h-[300px]'>
             
               <div className=' w-[300px]  lg:w-[200px] xs:w-[300px] '>
                 <NavLink to='/'>
-                  <h3 className=' text-3xl  font-bold '>mini<span className=' text-red-500'>Mart</span></h3>
+                  <h3 className=' text-3xl  font-bold '>Mini<span className=' text-red-500'>Mart</span></h3>
                 </NavLink>
             </div>
               <p className=' mt-8 text-sm text-gray-500'>Exercitation ullamco laboris nisi ut aliquip ex commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -75,10 +75,10 @@ function Footer() {
             <button className=' w-[100px] h-[25px] border-[1px] text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>Kitchen</button>
             <button className=' w-[100px] h-[25px] border-[1px] text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>Stools</button>
             <button className=' w-[100px] h-[25px] border-[1px] text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>Footstools</button>
-            <button className=' w-[100px] h-[25px] border-[1px] text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>Desks</button>
+            <button className=' w-[100px] h-[25px] border-[1px] sm:hidden text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>Desks</button>
           </div>
           </div>
-          <div className='  w-full h-[300px]'>
+          <div className='  w-full h-[300px] xs:mt-16'>
           <h1 className='font-semibold text-[20px] text-gray-800'>Information</h1>
           <div className='flex mt-8 items-center w-[305px] '>
             <p className=' text-sm text-gray-500'>Connaugt Road Central Suite 18B, 148</p>
@@ -99,7 +99,7 @@ function Footer() {
        
     </div>
 
-    <div className=' w-[100%] h-[80px]'>
+    <div className=' w-[100%] h-[70px] '>
       <div className='  w-[75%] mx-auto '>
           <div className=' flex justify-between items-center'>
                 <div className=' w-full h-[80px] mx-auto flex items-center'>

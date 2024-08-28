@@ -51,7 +51,7 @@ function SlickCarousel(props) {
 
   
     display:  flex;
-    background-color:wheat;
+    background-color:white;
     border: 1px solid red;
     border-radius: 100%;
     width:50px;
@@ -68,7 +68,7 @@ function SlickCarousel(props) {
     color: red;
    }
    button{
-    background-color:wheat;
+    background-color:white;
     width:50px;
     height: 50px;
     border-radius: 100%;
@@ -207,7 +207,7 @@ function SlickCarousel(props) {
                                    
                                     <div className=' w-[70px] h-[35px] flex justify-center items-center  bg-white text-red-500  '>
                                     
-                                        <div className=' w-9 h-[35px] grid place-items-center border-[1px] border-red-500 border-l-0' onClick={()=>{AddToWish(curElement)}}><NavLink to='/heart'> <IoMdHeart className=' text-[23px] hover:text-black text-red font-bold '/> </NavLink></div>
+                                        <div className=' w-9 h-[35px] grid place-items-center border-[1px] border-red-500 border-l-0' onClick={()=>{AddToWish(curElement)}}><NavLink to='/heart'> <CiHeart className=' text-[23px] hover:text-black text-red font-bold '/> </NavLink></div>
                                    
                                     
                                       <div className=' w-9 h-[35px]  grid place-items-center border-[1px] border-red-500 border-l-0' onClick={()=>{viewButton(curElement)}}><NavLink to='/dtailproduct'><FaRegEye className=' text-[20px] hover:text-black text-red font-bold '/> </NavLink></div>

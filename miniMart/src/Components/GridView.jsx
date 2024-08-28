@@ -1,8 +1,12 @@
 import React from 'react'
 
-function GridView() {
+function GridView({product}) {
+  const a=Array.from({length:(product)},(v,i)=>{
+    return v
+  })
+  console.log(a)
   return (
-    <div>GridView</div>
+    <h1>Helllow</h1>
   )
 }
 

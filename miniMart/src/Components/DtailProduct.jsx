@@ -106,7 +106,7 @@ const Wraper = styled.section`
                    </div>
                     <h1 className=' text-3xl uppercase tracking-wider font-semibold '>{name}</h1>
                     <div className=' mt-3'>
-                     <p className=' flex'><Star star={stars}/><span className=' ml-2 text-gray-500'>Reviews({reviews})</span></p>
+                     <p className=' flex items-center'><Star star={stars}/><span className=' ml-2 text-gray-500'>Reviews({reviews})</span></p>
                     </div>
 
                     <div className=' w-[90%] h-14  flex items-center text-gray-500 cursor-pointer '>

@@ -10,6 +10,7 @@ import Cart from "./Components/Cart"
 import Product from "./Components/ProductPages/Product"
 import { BrowserRouter,Routes,Route, RouterProvider, NavLink } from "react-router-dom"
 import Heart from "./Heart"
+import Header from "./Components/Header"
 import HomePage1 from "./Components/HomePages/HomePage1"
 import HomePage2 from "./Components/HomePages/HomePage2"
 import HomePage3 from "./Components/HomePages/HomePage3"
@@ -52,7 +53,7 @@ function App() {
   return (
     <>
        <BrowserRouter>
-      
+        <Header/>
        
         <Routes>
         <Route path="/" element={<Home/>}/>
@@ -96,8 +97,10 @@ function App() {
         <Route path="/listview" element={<ListView/>}/>
         <Route path="/loginpage" element={<LoginPage/>}/>
         <Route path="/checkoutpage" element={<CheckOutPage/>}/>
+
             
       </Routes>
+      <Footer/>
     </BrowserRouter>
     </>
   )

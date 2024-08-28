@@ -1,18 +1,11 @@
 import React from 'react'
 import Header from '../Header'
+import ProductPage1 from './ProductPage1'
 
 function Product() {
   return (
     <>
-      <Header/>
-      <div className='w-[75%] h-[100vh] bg-red-300'>
-          <div>
-            filter Section
-          </div>
-          <div>
-            Content Section
-          </div>
-      </div>
+      <ProductPage1/>
 
     </>
   )

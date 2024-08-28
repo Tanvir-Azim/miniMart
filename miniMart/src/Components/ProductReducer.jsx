@@ -130,6 +130,7 @@ const ProductReducer=(state,action)=>{
                 h2Banner:h2banner
             }
     }
+ 
     return state;
 }
     

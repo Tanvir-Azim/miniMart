@@ -1,9 +1,13 @@
 import React from 'react'
+import Modal from '../Modal'
 
 function Pages() {
   return (
-    <div>Pages</div>
+    <>
+           <Modal/>
+    </>
   )
+ 
 }
 
 export default Pages

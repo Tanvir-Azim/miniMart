@@ -1,3 +1,4 @@
+import { AiFillLayout } from "react-icons/ai"
 
 
 function FilterReducer(state,action) {
@@ -193,12 +194,18 @@ if(action.type === "UPDATE_SHORTIG"){
 
 if(action.type==="SET_SEARCH_VALUE"){
     const data = action.payload
+
+    const updateSearch = state.all_product.map((curElement)=>{
+        return curElement.name
+    })
     return{
         ...state,
         filters:{
             ...state.filters,
-            searchResult:data
-        }
+            searchResult:data,
+           
+        },
+        searchingSagetion:updateSearch,
     }
 }
 
@@ -214,8 +221,8 @@ if(action.type==="setAllData"){
     console.log(searchTemp)
     return{
         ...state,
-        searchProduct:searchTemp
-      
+        searchProduct:searchTemp,
+
     }
 }
 
@@ -286,7 +293,43 @@ if(action.type==="PAGES"){
     }
 }
 
+if(action.type === "HANDEL_CATEGORY"){
+    const {value,product} = action.payload
+    const updateCategory = product.filter((curElement)=>{
+       return curElement.category === value
+    })
 
+    
+    return{
+        ...state,
+        HomeCategory:updateCategory,
+        selectCategor:value,
+    }
+
+}
+
+
+if(action.type ==="SAGETIONS"){
+    const{e,product}=action.payload
+
+    let searchTemp = product.filter((cur)=>{
+        return cur.name.includes(e)
+        
+    })
+    return{
+        ...state,
+        searchProduct:searchTemp,
+        sagetionList:e
+
+    }
+}
+
+if(action.type ==="REMOVE_SAGETION"){
+    return{
+        ...state,
+        searchingSagetion:[],
+    }
+}
 
 
   return state

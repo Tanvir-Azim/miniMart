@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom'
 function PageContent() {
   return (
     <div className=' relative '>
-      <div className= ' absolute w-[1300px] h-[550px]  left-[3px] mt-4 shadow-2xl  border-[1px] border-gray-300  bg-white '>
-        <div className=' h-8 w-8   rotate-45 absolute left-[887px] top-[-18px]  border-b-0 border-r-0  border-[1px] border-gray-300'></div>
+      <div className= ' absolute w-[1300px] h-[550px]  left-[3px] mt-4 shadow-2xl  border-[1px] border-gray-300 bg-white '>
+        <div className=' h-8 w-8   rotate-45 absolute left-[360px] top-[-18px]  border-b-0 border-r-0  border-[1px] border-gray-300'></div>
         <div className='w-[1300px] h-[500px]  left-[3px] grid grid-cols-[1fr,1fr,1fr,1.3fr] grid-rows-1 mx-auto mt-4'>
           
             <div className=''>
@@ -64,7 +64,7 @@ function PageContent() {
                 <NavLink to='/product'>Spice Jars</NavLink>
               </div>
             </div>
-            <div className=' w-full h-full relative '>
+            <div className=' w-full h-full relative lg:hidden '>
             <img src="/images/HomePage2/h2banner3.jpeg"  className=' w-[80%] h-[350px] xs:w-full xs:h-full sm:w-full sm:h-full'/>
               <NavLink to='/singleproductpage/thapaserialos'><button className=' absolute top-[54%] left-[22%] z-50 text-xs hover:text-red-500  font-bold text-blue-500'>HURRY UP</button></NavLink>
     

@@ -19,7 +19,7 @@ function About() {
             <div className=' w-[300px] h-[25vh] xs:w-[190px] grid place-content-center  '>
                 <h1 className=' text-5xl font-[700] text-gray-800 tracking-wide xs:text-3xl'>ABOUT US</h1>
                 <div className=' mt-3 grid place-items-center  '>
-                  <p className=' text-xs text-gray-500'>Home<span>  About Us</span></p>
+                  
                 </div>
             </div>
           </div>

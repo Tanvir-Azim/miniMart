@@ -247,6 +247,12 @@ cursor: pointer;
                   <NavLink to='/cart'>
                   <div className=' h-auto w-auto flex relative'><HiOutlineShoppingBag className=' w-7 h-7'/><span className=' bg-black text-white w-4 h-4 grid place-items-center rounded-full text-[11px] absolute top-3 left-5'>3</span></div>
                   </NavLink>
+                  <NavLink to='/'>
+                      <div className=' relative'><HiOutlineLockClosed className=' w-7 h-7  ' onClick={()=>{setProfileDropdawn(true)}}/>
+                        {profileDropdawn && <ProfilePage getData={setProfileDropdawn}/>}
+                       
+                      </div>
+                  </NavLink>
                   
                 
                   

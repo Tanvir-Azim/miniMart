@@ -2,8 +2,7 @@ import React, { createContext, useContext, useEffect, useReducer,useState } from
 import reducer from './FilterReducer'
 import { useProductContax } from './ProdaxContax'
 import FilterColor from './FilterColor'
-import { AiFillLayout } from 'react-icons/ai'
-import Header from './Header'
+import Test from './Test'
 
 const FilterAppContax = createContext()
 
@@ -13,6 +12,8 @@ const initialState={
     filterProduct:[],
     all_product:[],
     searchProduct:[],
+    HomeCategory:[],
+    searchingSagetion:[],
     shorting_value:'',
         filters: {
         text:"",
@@ -32,6 +33,9 @@ const initialState={
     product:false,
     blog:false,
     pages:false,
+    selectCategory:'',
+    sagetionResult:[],
+    sagetionList:''
 
     
 }
@@ -43,6 +47,8 @@ function FilterContax({children}) {
     const[state,dispatch]=useReducer(reducer,initialState)
     
   const [values, setValues] = useState(0)
+  const[searchResult,setSearchResult]=useState([])
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleChange=(e)=>{
     const value = e.target.value
@@ -148,6 +154,7 @@ const getInputValue=(e)=>{
         type:"SET_SEARCH_VALUE",
         payload:value
     })
+
 }
 
 const getSearchValue=()=>{
@@ -191,10 +198,36 @@ const toggleProducts=()=>{
     })
 }
 
+const handelCategoryButton=(e)=>{
+ let value = e.target.value
+ dispatch({
+    type:"HANDEL_CATEGORY",
+    payload:{value,product}
+ })
 
-    
+
+
+}
+
+const seleteSearch=(e)=>{
+    setSearchTerm(e)
+    dispatch({
+        type:"SAGETIONS",
+        payload:{e,product}
+    })
+  }
+  
+const RemoveSagetion=()=>{
+    dispatch({
+        type:"REMOVE_SAGETION"
+    })
+}
+
+useEffect(()=>{
+},[])
+
   return (
-    <FilterAppContax.Provider value={{...state,ActiveGrid,ActiveList,handelTable,FilterColor,findColor,handelCompany,handelSeleteBox,handleChange,values,getInputValue,getSearchValue,loading,toggleHome,togglePages,toggleAbout,toggleBlog,toggleProducts,toggleContact}}>
+    <FilterAppContax.Provider value={{...state,ActiveGrid,ActiveList,handelTable,FilterColor,findColor,handelCompany,handelSeleteBox,handleChange,values,getInputValue,getSearchValue,loading,toggleHome,togglePages,toggleAbout,toggleBlog,toggleProducts,toggleContact,handelCategoryButton,searchResult,seleteSearch,searchTerm,RemoveSagetion}}>
         {children}
     </FilterAppContax.Provider>
   )

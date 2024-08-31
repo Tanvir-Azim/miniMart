@@ -13,29 +13,19 @@ function ProfilePage({getData}) {
   @keyframes identifier {
 
     0%{
-      top:18px;
-      top: 0px;
-      left:0px;
-   
-    right:0px ;
+      top:78x;
+      right:-500px
 
     }
-    100%{
-      top:18px;
-    left: -320px;
-    right:-24px ;
 
-    }
-    
   }
  
 
   .main{
     background-color:#fdfafa;
     position: absolute;
-    top:18px;
-    left: -287px;
-    right:-24px ;
+    top:78px;
+    right:-38px ;
     width: 360px;
     height: 80vh;
     animation-name:identifier;
@@ -94,7 +84,7 @@ function ProfilePage({getData}) {
                     </div>
 
                     <div className=' w-[93px]  h-16 grid place-items-center'>
-                      <button className=' w-[75px] text-sm h-7 bg-gray-500 text-[#fdfafa] font-thin rounded-full pb-[2px] hover:bg-red-500 '><input type='submit'value='' className='btn '/> Login</button>
+                      <button className=' w-[75px] text-sm h-7 bg-gray-800 text-[#fdfafa] font-thin rounded-full pb-[2px] hover:bg-red-500 '><input type='submit'value='' className='btn '/> Login</button>
                     </div>
                     
                 </form>
@@ -119,7 +109,7 @@ function ProfilePage({getData}) {
 
                     
                     <div className=' w-[93px]  h-14 grid place-items-center'>
-                      <button className=' w-[75px] text-sm h-7 bg-gray-500 text-[#fdfafa] font-thin rounded-full pb-[2px] hover:bg-red-500 '><input type='submit'value='' className='btn '/>Register</button>
+                      <button className=' w-[75px] text-sm h-7 bg-gray-800 text-[#fdfafa] font-thin rounded-full pb-[2px] hover:bg-red-500 '><input type='submit'value='' className='btn '/>Register</button>
                     </div>
 
                  </form>

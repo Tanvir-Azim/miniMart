@@ -260,7 +260,7 @@
 
     {
         "id": "thapaserialnob",
-        "name": "Round Coffee Table",
+        "name": "Round Cofee Table",
         "price": 10000,
         "colors": [
         "#22D3EF",
@@ -348,7 +348,7 @@
     },
     {
         "id": "thapaserialnoc",
-        "name": "Round Side Table",
+        "name": "Round Cofee Table",
         "price": 11000,
         "colors": [
         "#CDD0D0",
@@ -501,7 +501,7 @@
 
 {
     "id": "tanvirserialc",
-    "name": "Marvelous Modern Bed",
+    "name": "Metal Platform Bed",
     "price": 20000,
     "colors": [
     "#000"
@@ -663,7 +663,7 @@
             },
             {
                 "id": "thapaserialnoe",
-                "name": "Computer Desk",
+                "name": "Computer Desk ",
                 "price": 12000,
                 "colors": [
                 "#ff0000",
@@ -751,7 +751,7 @@
                     },
                     {
                         "id": "thapaserialnof",
-                        "name": "Round Side End Table",
+                        "name": "Computer Desk",
                         "price": 18000,
                         "colors": [
                         "#ff0000",
@@ -840,7 +840,7 @@
                         },
                         {
                             "id": "tanvirseriald",
-                            "name": "MAYTEX Sofa",
+                            "name":"Marvelous Sofa",
                             "price": 13000,
                             "colors": [
                             "#000"
@@ -905,7 +905,7 @@
                         },
                         {
                             "id": "thapaserialnog",
-                            "name": "Round Side End Table",
+                            "name": "VECELO Computer Desk",
                             "price": 15000,
                             "colors": [
                            "#ff0000",
@@ -1084,7 +1084,7 @@
                         },
                         {
                             "id": "thapaserialnoi",
-                            "name": "Roling Sit-Stand Desk",
+                            "name": "Desk",
                             "price": 10000,
                             "colors": [
                             "#000",
@@ -1532,7 +1532,7 @@
                                             
                                             },
                                             {  "id": "thapaserialom",
-                                            "name": "Frame Computer Desk",
+                                            "name": "Desk",
                                             "price": 11000,
                                             "colors": [
                                             "#000",
@@ -1791,7 +1791,7 @@
                                             {  
                                                 
                                             "id": "thapaserialoq",
-                                            "name": "Wall Sconce Lamp",
+                                            "name": "Lamp",
                                             "price": 9000,
                                             "available":false,
                                             "colors": [
@@ -1877,7 +1877,7 @@
                                             },
                                             {  
                                             "id": "thapaserialor",
-                                            "name": "MAYTEX Sofa",
+                                            "name": "Sofa",
                                             "price": 9000,
                                             "available":true,
                                             "colors": [
@@ -1962,7 +1962,7 @@
            
                                                 {
                                                     "id": "tanvirseriale",
-                                                    "name": "Dining Chairs",
+                                                    "name":"Dining Chair",
                                                     "price": 15000,
                                                     "colors": [
                                                     "#000"    
@@ -2051,7 +2051,7 @@
                                             
                                             },{
                                                 "id": "tanvirserialf",
-                                                "name": "Marvelous Modern Bed",
+                                                "name":"Metal Platform Bed",
                                                 "price": 25000,
                                                 "colors": [
                                                 "#000"
@@ -2125,7 +2125,7 @@
                                                 ]
                                             },{
                                                 "id": "tanvirserialg",
-                                                "name": "MAYTEX Sofa",
+                                                "name":"Marvelous Sofa",
                                                 "price": 14000,
                                                 "colors": [
                                                 "#000"
@@ -2189,7 +2189,7 @@
                                             },
                                             {
                                                 "id": "tanvirserialh",
-                                                "name": "Queen Platform Bed",
+                                                "name": "Bed",
                                                 "price": 30000,
                                                 "colors": [
                                                 "#000",
@@ -2335,7 +2335,7 @@
                                             },
                                             {
                                                 "id": "tanvirserialj",
-                                                "name": "MarvelousBed",
+                                                "name": "Bed",
                                                 "price": 45000,
                                                 "colors": [
                                                 "#000"
@@ -2480,7 +2480,7 @@
 
                                             {
                                                 "id": "tanvirserialjgs",
-                                                "name": "MarvelousBed",
+                                                "name": "Bed",
                                                 "price": 45000,
                                                 "colors": [
                                                 "#000"

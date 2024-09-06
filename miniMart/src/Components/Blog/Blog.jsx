@@ -1,9 +1,18 @@
 import React from 'react'
 import BlogData from '../BlogData'
+import { useFilterContax } from '../FilterContax'
+import Loding from '../Loding'
+import Footer from '../Footer'
+import Header from '../Header'
 
 function Blog() {
+  const{blogLoading}=useFilterContax()
   return (
-    <div className=' w-full'>
+    <>
+    {
+      blogLoading?<Loding/>:<div>
+      <Header/>
+      <div className=' w-full'>
           <div className=' w-full h-[28vh bg-[#e2dfdf]'>
             <div className=' w-ful flex h-[28vh] items-center justify-center'>
               <div className='  w-[300px] h-[25vh]  grid place-items-cente'>
@@ -20,6 +29,11 @@ function Blog() {
                 <BlogData/>
           </div>
     </div>
+    <Footer/>
+    </div>
+    }
+ 
+    </>
   )
 }
 

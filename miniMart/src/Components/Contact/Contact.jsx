@@ -1,8 +1,17 @@
 import React from 'react'
+import { useFilterContax } from '../FilterContax'
+import Loding from '../Loding'
+import Footer from '../Footer'
+import Header from '../Header'
 
 function Contact() {
+  const{contactLoading}=useFilterContax()
   return (
-    <div className=' w-full'>
+    <>
+    {
+      contactLoading?<Loding/>:<div>    
+        <Header/>
+      <div className=' w-full'>
             <div className=' w-full  '>
                <img className=' h-[full] xs:h-[120px]  sm:h-[130px] md:h-[130px]' src="/images/HomePage1/contact.PNG"/>
             </div>
@@ -55,6 +64,11 @@ function Contact() {
               <p className='' ><iframe className=' w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227.8673848033247!2d88.74838432425746!3d23.964748332066712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f953a30ac3e4d9%3A0xc2409f56803dcf4b!2smini%20mart!5e0!3m2!1sen!2sbd!4v1724837564485!5m2!1sen!2sbd" width="800" height="600" allowFullScreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
              </div>
     </div>
+    <Footer/>
+    </div>
+    }
+
+    </>
   )
 }
 

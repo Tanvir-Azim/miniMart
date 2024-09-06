@@ -2,6 +2,7 @@ import React from 'react'
 import { useFilterContax } from './FilterContax'
 import { useProductContax } from './ProdaxContax'
 import { NavLink } from 'react-router-dom'
+import Header from './Header'
 
 
 function Category() {
@@ -19,8 +20,9 @@ function Category() {
     console.log(selectCategor)
   
     
-    
+
   return (
+    <>
 
     <div className=' relative z-50'>
         
@@ -44,6 +46,7 @@ function Category() {
 
         </div>
     </div>
+    </>
   )
 }
 

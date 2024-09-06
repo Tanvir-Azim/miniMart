@@ -12,10 +12,14 @@ import styled from 'styled-components';
 import Short from '../Short';
 import FilterData from './FilterData';
 import { useCardContax } from '../CartContax';
+import Footer from '../Footer';
+import Loding from '../Loding'
+
+
 
 
 function ProductPage1() {
-  const{gridview,listview,filterProduct}=useFilterContax()
+  const{gridview,listview,filterProduct,productLoading}=useFilterContax()
   const{WistToCart,AddToWish,viewButton}=useCardContax()
 
   const[page,setPage]=useState(1)
@@ -61,19 +65,22 @@ const NextPageHandaler=(next)=>{
 
   return (
     <>
-    <Wraper> 
-      <div className=' w-[75%] h-[100vh] mx-auto grid grid-cols-[1fr,3fr]  mt-4   sm:grid-cols-1 sm:grid-rows-2 sm:h-[259vh] xs:grid-cols-1 xs:grid-rows-2  xs:h-[400vh]     md:h-[243vh] md:grid-cols-1 md:grid-rows-2'>
+    {
+      productLoading?<Loding/>:<div>
+      <Header/>
+      <Wraper> 
+      <div className=' w-[75%]   h-[100vh] mx-auto grid grid-cols-[1fr,3fr]  mt-4   sm:grid-cols-1 sm:grid-rows-2 sm:h-[259vh] xs:grid-cols-1 xs:grid-rows-2  xs:h-[400vh]     md:h-[254vh]  md:grid-cols-1 md:grid-rows-2'>
       <div className=' w-full  h-[90vh] border-[1px] border-gray-300'>
       <FilterData product={filterProduct}/>
           </div>
-          <div className=' xs:mt-[-660px] md:mt-[-150px] sm:mt-[-130px] w-full h-[100vh] '>{ /*main grid or list div*/}
-              <div className=' w-full h-12  flex justify-between items-center'>
+          <div className=' ml-5 xs:mt-[-660px] md:mt-[-150px] sm:mt-[-130px] w-full h-[100vh] '>{ /*main grid or list div*/}
+              <div className=' w-full  lg:mx-auto h-12  flex justify-between items-center'>
                 <Short/>
                 </div>
               
                 
                   {gridview === true &&
-                    <div className=' xs:bg-red-300 w-[100%] h-[79vh] mx-auto   md:h-[120vh] sm:h-[115vh] xs:h-[250vh] lg:w-[85%] grid grid-cols-3 grid-rows-2 gap-4 m-auto md:grid-cols-2 md:grid-rows-[170px 170px]  sm:grid-cols-2 sm:grid-rows-[170px 170px 170px 170px] xs:grid-cols-1 xs:grid-rows-[170px 170px 170px] lg:gap-20 '>
+                    <div className='w-[100%] h-[79vh] mx-auto   md:h-[120vh] sm:h-[115vh] xs:h-[250vh] lg:w-[85%] grid grid-cols-3 grid-rows-2 gap-4 m-auto md:grid-cols-2 md:grid-rows-[170px 170px]  sm:grid-cols-2 sm:grid-rows-[170px 170px 170px 170px] xs:grid-cols-1 xs:grid-rows-[170px 170px 170px] lg:gap-20 '>
                    {
                       filterProduct.slice(page*6-6,page*6).map((curElement)=>{
                       return(
@@ -86,7 +93,7 @@ const NextPageHandaler=(next)=>{
                        
                                 <ul className='main w-[200px] h-[260px] '>{/*card air name price air div*/}
                                    <li>
-                                      <img src={curElement.image} className='img w-[200px] h-[180px] xl:w-[170px] md:w-[200px] lg:w-[180px] '/>
+                                      <img src={curElement.image} className='img w-[200px] h-[180px] lg:w-[170px] lg:h-[170px] lg:p-2 xl:p-1 '/>
                                 
                                    <li className='menu'>
                                   <div className=' flex  w-full h-full items-center'>
@@ -129,28 +136,28 @@ const NextPageHandaler=(next)=>{
                  
                
   
-                <div>
+                <div className='  w-[80%]  mx-auto xs:w-full'>
                   {listview === true &&
-                  <div className= 'w-[90%] h-full bg-gray-30 mx-auto'>
+                  <div className= 'w-full h-full xl:mt-4  bg-gray-30 mx-auto'>
                    {
-                      filterProduct.slice(page*6-6,page*6).map((curElement)=>{
+                      filterProduct.slice(page*2-2,page*2).map((curElement)=>{
                        return(
                           <>
                           
                           <div className=' w-full h-300px bg-green-00 border-[1px] border-gray-200 mt-5'>
                             <div className='w-full h-[270px] flex justify-around items-center'>
                               <div className=' w-[300px] h-[200px grid place-items-center '>
-                                  <img src={curElement.image} className=' w-[200px] h-[200px]'/>
+                                  <img src={curElement.image} className=' w-[200px] h-[200px] xs:w-[140px] xs:h-[140px] xs:mr-3 sm:w-[140px] sm:h-[140px] sm:mr-3 md:w-[170px] md:h-[170px] lg:h-[180px] lg:w-[180px] '/>
                               </div>
                               <div className=' w-[350px] h-[200px]'>
-                                <p className=' text-lg font-[600]'>{curElement.name}</p>
+                                <p className=' text-lg font-[600] xs:text-[15px]'>{curElement.name}</p>
                                    <div className='flex h-10 w-full items-center'>
                                       <TbCurrencyTaka className=' text-xl'/>
                                       <p>{curElement.price}</p> 
                                       
                                    </div> 
                                
-                                <p className=' text-md'>{curElement.description.slice(0,90)}</p>
+                                <p className=' text-md xs:text-xs sm:text-xs md:text-sm'>{curElement.description.slice(0,90)}</p>
                                 <div></div>
                                 <NavLink to='/cart'>
                                     <button onClick={()=>{WistToCart(curElement,quantity,curElement.colors[0])}} className=' rounded-sm mt-5 w-32 h-9 bg-red-500 text-white font-[400] hover:bg-white hover:text-red-500 hover:border-[1px] border-red-500'>Add To Cart</button>
@@ -176,7 +183,7 @@ const NextPageHandaler=(next)=>{
               
                 
                 {filterProduct.length> 0 &&
-                 <div className=' w-100% sm:mt-20 md:mt-6 xs:mt-6 mt-3'>
+                 <div className=' w-100% sm:mt-20 md:mt-6 xs:mt-6 lg:mt-4 xl:mt-4 mt-3'>
                       <div className='  w-[40%] h-12 flex mx-auto lg:mt-8 gried place-content-center '>
                        <button onClick={()=>{PreviousPageHandaler( page-1)}} className=' p-[2px]'>Prev</button>
                          {
@@ -200,8 +207,12 @@ const NextPageHandaler=(next)=>{
             
 
               
-            </Wraper>   
+            </Wraper>
+            <Footer/>   
              
+      </div>
+    }
+
     </>
   )
 }

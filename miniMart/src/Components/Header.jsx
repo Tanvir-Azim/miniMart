@@ -1,6 +1,5 @@
-import React,{createContext, useState} from 'react'
+import React,{useState} from 'react'
 import { NavLink } from 'react-router-dom'
-import { IoSearchOutline } from "react-icons/io5"
 import { CiHeart } from "react-icons/ci";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { MdOutlineMenu } from "react-icons/md";
@@ -11,19 +10,16 @@ import PageContent from './PageContent';
 import { HiOutlineLockClosed } from "react-icons/hi2";
 import ProfilePage from './ProfilePage';
 import { useCardContax } from './CartContax';
-import { IoIosCall } from "react-icons/io";
-import { MdOutlineMail } from "react-icons/md";
 import { useFilterContax } from './FilterContax';
 import { IoMdMenu } from "react-icons/io";
 import Category from './Category';
-import PlaceHolder from './PlaceHolder';
-import SagetionValue from './SagetionValue';
 import { RxCross2 } from "react-icons/rx";
+import ProfilePageInformation from './ProfilePageInformation';
 
 
 function Header() {
   const{cart,wish,totalItem}=useCardContax()
-  const{FastLoading,toggleHome,togglePages,toggleAbout,toggleBlog,toggleProducts,toggleContact,home,about,product,contact,pages,blog,getInputValue,getSearchValue,searchingSagetion ,searchValue,searchTerm,seleteSearch,sagetionList,RemoveSagetion,filters:{category,searchResult}}=useFilterContax()
+  const{FastLoading,toggleHome,togglePages,toggleAbout,toggleBlog,toggleProducts,toggleContact,home,about,product,contact,pages,blog,getInputValue,getSearchValue,searchingSagetion ,searchValue,searchTerm,seleteSearch,sagetionList,RemoveSagetion,searchBoxValue,filters:{category,searchResult}}=useFilterContax()
 
   const [showModal,setShowModal]=useState(false)
   const [profileDropdawn,setProfileDropdawn]=useState(false)
@@ -121,10 +117,10 @@ console.log(uniqueArray)
     <>
 
     
-        <div className=' w-[100%] h-16 flex justify-between  items-center mini:w-[360px]'>
+        <div className=' w-[100%] h-16 flex justify-between  items-center mini:w-[360px] '>
         
 
-            <div className=' w-[250px] grid place-items-center lg:w-[250px] xs:w-[200px]'>
+            <div onClick={()=>{toggleHome()}} className=' w-[250px] grid place-items-center lg:w-[250px] xs:w-[200px]'>
                 <NavLink to='/'>
                   <h3 className=' text-3xl  font-bold '>Mini<span className=' text-red-500'>Mart</span></h3>
                 </NavLink>
@@ -134,7 +130,7 @@ console.log(uniqueArray)
                   <ul className='flex space-x-8 text-gray-600 font-[400]  text-md tracking-[2px] xs:hidden sm:hidden md:hidden lg:text-sm  lg:space-x-4  items-center'>
 
                     <Menu>
-                       <li onClick={()=>{toggleHome()}} className={home?" text-red-500 ":""}><NavLink  to=''>HOME</NavLink></li>
+                       <li onClick={()=>{toggleHome()}} className={home?" text-red-500 ":""}><NavLink  to='/'>HOME</NavLink></li>
                     </Menu>
                       <ProductMenu>
                       
@@ -185,8 +181,8 @@ console.log(uniqueArray)
 
             <div className=' w-[90%]  flex justify-around'>
 
-                <div className=' w-[200px]  grid place-items-center lg:w-[250px] xs:w-[200px] sm:hidden xs:hidden'>
-                    <div onClick={()=>{handelCategories()}}  className=' w-[100%] cursor-pointer h-10 bg-gray-800  flex items-center justify-evenly rounded-sm'>
+                <div className=' w-[200px]  grid place-items-center md:w-[200px] lg:w-[200px] xs:w-[200px] sm:hidden xs:hidden'>
+                    <div onClick={()=>{handelCategories()}}  className=' w-[100%] cursor-pointer h-10 bg-gray-800  flex items-center justify-evenly rounded-sm'> 
                         <div>
                           <IoMdMenu className=' text-xl text-white'/>
                         </div>
@@ -217,7 +213,7 @@ console.log(uniqueArray)
                       <div className=' h-auto w-auto flex relative'><HiOutlineShoppingBag className=' text-white w-6 h-6 '/><span className=' bg-black text-white w-4 h-4 grid place-items-center rounded-full text-[11px] absolute top-3 left-5'>{totalItem}</span></div>
                     </NavLink>
 
-                    <NavLink to='/'>
+                    <NavLink to="/profilepageinformation">
                       <div className=' relative'><HiOutlineLockClosed className=' w-6 h-6  text-white  '/>
                        
                       </div>
@@ -229,10 +225,13 @@ console.log(uniqueArray)
       {showModal?<Modal/>:null}
       {categoryDropdawn?<Category/>:""}
 
-      <div className=' xs:hidden  w-[40%] m-0 bg-white absolute lg:left-[35%] md:left-[33%] sm:left-[15%] xs:laft:[-500px]  z-50 top-[112px] left-[30%]  flex shadow-2xl  '>
-        <div className=' w-[95%] bg-white  '>
+
+      {
+        uniqueArray.length>1 &&     <div className=' xs:hidden  w-[40%] m-0 bg-white absolute lg:left-[35%] md:left-[33%] sm:left-[15%] xs:laft:[-500px]  z-50 top-[112px] left-[30%]  fle shadow-2xl  flex  '>
+        
+        <div className=' w-[95%] h-[20vh] overflow-scroll bg-white '>
           {
-            uniqueArray.slice(0,6).filter((cur)=>{
+            uniqueArray.filter((cur)=>{
               return cur.toLowerCase().startsWith(searchResult)
                 }).map((cur)=>{
                   return <NavLink to='/search'> 
@@ -244,11 +243,15 @@ console.log(uniqueArray)
                 })
           
           }
-      </div>
-      {searchingSagetion.length>1 && <div><RxCross2 className=' text-2xl cursor-pointer hover:text-red-500' onClick={()=>{RemoveSagetion()}}/></div>}
 
+
+        </div>
+        {searchingSagetion.length>1 && <div><RxCross2 className=' text-2xl cursor-pointer hover:text-red-500' onClick={()=>{RemoveSagetion()}}/></div>}
       </div>
-      <hr className='mx-auto w-[40%] bg-white z-20 '/>
+     
+      }
+
+ 
     </>
   )
 }

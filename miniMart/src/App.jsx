@@ -23,6 +23,12 @@ import ListView from "./Components/ListView"
 import LoginPage from "./Components/LoginPage"
 import CheckOutPage from "./Components/CheckOutPage"
 import CategoryData from "./Components/CategoryData"
+import ProfilePageInformation from "./Components/ProfilePageInformation"
+import ChangePassword from "./Components/Profile/ChangePassword"
+import ManageAddress from "./Components/Profile/ManageAddress"
+import ProfileInfo from "./Components/Profile/ProfileInfo"
+import CompleteOder from "./Components/CompleteOder"
+
 
 
 function App() {
@@ -31,7 +37,6 @@ function App() {
   return (
     <>
        <BrowserRouter>
-        <Header/>
        
         <Routes>
         <Route path="/" element={<Home/>}/>
@@ -53,10 +58,16 @@ function App() {
         <Route path="/loginpage" element={<LoginPage/>}/>
         <Route path="/checkoutpage" element={<CheckOutPage/>}/>
         <Route path="/categorydata" element={<CategoryData/>}/>
+        <Route path="/profilepageinformation" element={<ProfilePageInformation/>}/>
+        <Route path="/profileinfo" element={<ProfileInfo/>}/>
+        <Route path="/manageaddress" element={<ManageAddress/>}/>
+        <Route path="/changepassword" element={<ChangePassword/>}/>
+        <Route path="/completeoder" element={<CompleteOder/>}/>
+  
+
 
             
       </Routes>
-      <Footer/>
     </BrowserRouter>
     </>
   )

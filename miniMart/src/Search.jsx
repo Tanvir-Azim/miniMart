@@ -3,6 +3,7 @@ import Header from './Components/Header'
 import { useFilterContax } from './Components/FilterContax'
 import SearchProduct from './Components/SearchProduct'
 import { NavLink } from 'react-router-dom'
+import Footer from './Components/Footer'
 
 
 function Search() {
@@ -12,12 +13,14 @@ function Search() {
 
   return (
     <>
+    <Header/>
     <div className=' w-full h-full'>
 
         <div>
             <SearchProduct product={searchProduct}/> 
         </div>
     </div>
+    <Footer/>
 
     </>
   )

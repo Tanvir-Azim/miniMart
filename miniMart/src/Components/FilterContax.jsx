@@ -3,6 +3,7 @@ import reducer from './FilterReducer'
 import { useProductContax } from './ProdaxContax'
 import FilterColor from './FilterColor'
 import Test from './Test'
+import {toast } from 'react-toastify';
 
 const FilterAppContax = createContext()
 
@@ -35,12 +36,24 @@ const initialState={
     pages:false,
     selectCategory:'',
     sagetionResult:[],
-    sagetionList:''
+    sagetionList:'',
+    Profile:true,
+    Manage:false,
+    Password:false,
+    profileinfo:false,
+    ProfileWish:false,
+    ManageAc:false,
+    searchBoxValue:true,
 
     
 }
 function FilterContax({children}) {
     const[loading,isLoading]=useState(false)
+    const[aboutLoading,setAboutLoading]=useState(false)
+    const[productLoading,setProductLoading]=useState(false)
+    const[contactLoading,setContactLoading]=useState(false)
+    const[blogLoading,setBlogLoading]=useState(false)
+    const[homeLoading,setHomeLoading]=useState(false)
     const{product}=useProductContax()
 
 
@@ -169,16 +182,32 @@ const toggleHome=()=>{
     dispatch({
         type:'HOME'
     })
+    setHomeLoading(true)
+    setTimeout(()=>{
+    setHomeLoading(false)
+    },1000)
 }
 const toggleAbout=()=>{
     dispatch({
         type:'ABOUT'
     })
+    setAboutLoading(true)
+    
+    setTimeout(()=>{
+        setAboutLoading(false)
+    },1000)
+
+    
+
 }
 const toggleBlog=()=>{
     dispatch({
         type:'BLOG'
     })
+    setBlogLoading(true)
+    setTimeout(()=>{
+        setBlogLoading(false)
+    },1000)
 }
 const togglePages=()=>{
     dispatch({
@@ -191,11 +220,21 @@ const toggleContact=()=>{
         type:'CONTACT'
     })
 
+    setContactLoading(true)
+
+    setTimeout(()=>{
+        setContactLoading(false)
+    },2000)
+
 }
 const toggleProducts=()=>{
     dispatch({
         type:'PRODUCTS'
     })
+    setProductLoading(true)
+    setTimeout(()=>{
+        setProductLoading(false)
+    },2000)
 }
 
 const handelCategoryButton=(e)=>{
@@ -223,11 +262,54 @@ const RemoveSagetion=()=>{
     })
 }
 
-useEffect(()=>{
-},[])
+const handelProfile=()=>{
+    dispatch({
+        type:"PROFILE",
+
+    })
+}
+
+const ToggleInformation=()=>{
+    dispatch({
+        type:"PROFILE_INFO",
+
+    })
+}
+  
+const ToggleAddress=()=>{
+    dispatch({
+        type:"MANAGE",
+
+    })
+}
+const TogglePassword=()=>{
+    dispatch({
+        type:"PASSWORD",
+
+    })
+}
+
+const WishProfile=()=>{
+    dispatch({
+        type:"WISH_PROFILE",
+
+    })
+}
+
+const Logout=()=>{
+    toast.success('logout successfully');
+}
+
+const ToggleManage=()=>{
+    dispatch({
+        type:"MANAGEACCOUNT"
+    })
+
+}
+
 
   return (
-    <FilterAppContax.Provider value={{...state,ActiveGrid,ActiveList,handelTable,FilterColor,findColor,handelCompany,handelSeleteBox,handleChange,values,getInputValue,getSearchValue,loading,toggleHome,togglePages,toggleAbout,toggleBlog,toggleProducts,toggleContact,handelCategoryButton,searchResult,seleteSearch,searchTerm,RemoveSagetion}}>
+    <FilterAppContax.Provider value={{...state,ActiveGrid,ActiveList,handelTable,FilterColor,findColor,handelCompany,handelSeleteBox,handleChange,values,getInputValue,getSearchValue,loading,toggleHome,togglePages,toggleAbout,toggleBlog,toggleProducts,toggleContact,handelCategoryButton,searchResult,seleteSearch,searchTerm,RemoveSagetion,handelProfile,ToggleInformation,ToggleAddress,TogglePassword,WishProfile,Logout,ToggleManage,aboutLoading,productLoading,contactLoading,blogLoading,homeLoading}}>
         {children}
     </FilterAppContax.Provider>
   )

@@ -19,9 +19,9 @@ function Modal() {
               <hr/>
               <div onClick={()=>{toggleBlog()}}  className={blog?' text-red-500 text-[17px] relative  h-10 ml-5 flex items-center':'text-[17px] relative  h-10 ml-5 flex items-center'}><NavLink to='/blog'>Blog</NavLink></div>
               <hr/>
-              <div onClick={()=>{togglePages()}} className={pages?' text-[17px] relative  h-10 ml-5 flex items-center text-red-500':'ext-[17px] relative  h-10 ml-5 flex items-center'}><NavLink to='/pages'>Pages</NavLink></div>
+              <div onClick={()=>{togglePages()}} className={pages?' text-[17px] relative  h-10 ml-5 flex items-center text-red-500 xs:hidden sm:hidden md:hidden':'ext-[17px] relative  h-10 ml-5 flex items-center xs:hidden sm:hidden md:hidden'}><NavLink to=''>Pages</NavLink></div>
               <hr/>
-              <div onClick={()=>{toggleAbout()}}  className={about?' text-[17px] relative  h-10 ml-5 flex items-center text-red-500':'text-[17px] relative  h-10 ml-5 flex items-center'}><NavLink to='/about'>Home</NavLink></div>
+              <div onClick={()=>{toggleAbout()}}  className={about?' text-[17px] relative  h-10 ml-5 flex items-center text-red-500':'text-[17px] relative  h-10 ml-5 flex items-center'}><NavLink to='/about'>About</NavLink></div>
               <hr/>
               <div onClick={()=>{toggleContact()}} className={contact?' text-[17px] relative  h-10 ml-5 flex items-center text-red-500':' text-[17px] relative  h-10 ml-5 flex items-center'}><NavLink to='/contact'>Contact</NavLink></div>
 

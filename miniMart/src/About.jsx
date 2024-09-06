@@ -6,10 +6,21 @@ import { IoLogoGoogleplus } from "react-icons/io";
 import { TfiYoutube } from "react-icons/tfi";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import Loding from './Components/Loding';
+import { useFilterContax } from './Components/FilterContax';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 
 function About() {
+  const{loading,aboutLoading}=useFilterContax()
   return (
+   <>
+
+ 
+    
+    {aboutLoading?<Loding/>: <div>
+    <Header/>  
     <div className=' w-full  mb-8 '>
       <div className=' w-full h-[28vh bg-gray-100'>
         <div className=' w-ful flex h-[28vh] items-center justify-center'>
@@ -108,7 +119,10 @@ function About() {
         </div>
         </div>
         </div>
-    
+        <Footer/>
+        </div> }
+
+        </> 
   )
 }
 

@@ -9,6 +9,8 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { CiHeart } from "react-icons/ci";
 import { TbCurrencyTaka } from "react-icons/tb";
 import Star from './Star';
+import Header from './Header'
+import Footer from './Footer'
 function CategoryData() {
     const {HomeCategory,handelTable,FilterColor}=useFilterContax()
     const{AddCartData,AddToWish,viewButton}=useCardContax()
@@ -44,6 +46,7 @@ function CategoryData() {
   return (
     
         <Wraper>
+        <Header/>
              
        
        <div className=' w-[77%] h-[95vh]  md:h-[170vh] sm:h-[180vh] xs:h-[330vh] lg:w-[85%] grid grid-cols-4 grid-rows-2 gap-4 m-auto mt-10  sm:mt-[20px] md:grid-cols-2 md:grid-rows-[170px 170px  ] sm:grid-cols-2 sm:grid-rows-[170px 170px 170px 170px] xs:grid-cols-1 xs:grid-rows-[170px 170px 170px] lg:gap-20 '>
@@ -111,7 +114,7 @@ function CategoryData() {
                   
             </div>
               
-            
+            <Footer/>
             </Wraper>
       )
   

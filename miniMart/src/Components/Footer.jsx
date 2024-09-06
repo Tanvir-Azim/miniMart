@@ -25,8 +25,8 @@ function Footer() {
   })
   return (
     <>
-    <div className=' h-[38vh] w-[100%] sm:h-[90vh] bg-gray-100  xs:h-[130vh] md:h-[85vh]  flex items-center flex-col mt-10'>
-      <div className=' w-[80%] h-[32vh] md:h-[80vh] sm:h-[80vh] bg-gray-100  grid grid-cols-4 grid-rows-1 place-items-center md:grid-rows-2 md:grid-cols-2 sm:grid-rows-2 sm:grid-cols-2 xs:grid-rows-4 xs:grid-cols-1 xs:mt-14 mx-auto xs:h-[120vh] gap-4 mt-10 '>
+    <div className='  h-[38vh] w-[100%] sm:h-[90vh] bg-gray-100  xs:h-[130vh] md:h-[85vh]  flex items-center flex-col mt-10'>
+      <div className=' pt-4 w-[80%]  h-[32vh] md:h-[80vh] sm:h-[80vh] bg-gray-100  grid grid-cols-4 grid-rows-1 place-items-center md:grid-rows-2 md:grid-cols-2 sm:grid-rows-2 sm:grid-cols-2 xs:grid-rows-4 xs:grid-cols-1 xs:mt-14 mx-auto xs:h-[120vh] gap-4 mt-10 '>
           <div className='  w-full h-[300px]'>
             
               <div className=' w-[300px]  lg:w-[200px] xs:w-[300px] '>
@@ -58,7 +58,7 @@ function Footer() {
                 </div>
             </div>
           </div>
-          <div className=' bg-red-60   h-[300px] w-full lg:hidden '>
+          <div className=' bg-red-60   h-[300px] w-full lg:hidden'>
             <h1 className='font-semibold text-[20px] text-gray-800'>Product Tags</h1>
           <div className='mt-8'>
             <button className=' w-[100px] h-[25px] border-[1px] text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none '>Table</button>
@@ -71,9 +71,6 @@ function Footer() {
             <button className=' w-[100px] h-[25px] border-[1px] text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>Pouf</button>
             <button className=' w-[100px] h-[25px] border-[1px] text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>Wood</button>
             <button className=' w-[100px] h-[25px] border-[1px] text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>Office</button>
-            <button className=' w-[100px] h-[25px] border-[1px] text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>outDoor</button>
-            <button className=' w-[100px] h-[25px] border-[1px] text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>Kitchen</button>
-            <button className=' w-[100px] h-[25px] border-[1px] text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>Stools</button>
             <button className=' w-[100px] h-[25px] border-[1px] text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>Footstools</button>
             <button className=' w-[100px] h-[25px] border-[1px] sm:hidden text-gray-500 border-gray-500 rounded-full hover:bg-red-500 hover:text-white hover:border-none mb-2'>Desks</button>
           </div>
@@ -113,16 +110,16 @@ function Footer() {
                           </NavLink>
                       </div>
 
-                    <div className=' text-xs'>.- All rights Reserved</div>
+                    <div className=' text-xs xs:hidden'>.- All rights Reserved</div>
 
                 </div>
             
                 <div className=' w-[400px] h-[50px] flex justify-evenly items-center'>
-                      <RiVisaLine className=' text-[30px]'/>
-                      <FaAmazonPay className=' text-[30px]'/>
-                      <SiDiscover className=' text-[40px]'/>
-                      <BsAmazon className=' text-[20px]'/>
-                      <FaCcPaypal className=' text-[20px]'/>
+                      <RiVisaLine className=' text-[30px] xs:text-sm sm:text-sm'/>
+                      <FaAmazonPay className=' text-[30px] xs:text-sm sm:text-sm'/>
+                      <SiDiscover className=' text-[40px] xs:text-sm sm:text-sm'/>
+                      <BsAmazon className=' text-[20px] xs:text-sm sm:text-sm'/>
+                      <FaCcPaypal className=' text-[20px] xs:text-sm sm:text-sm'/>
 
                 </div>
 

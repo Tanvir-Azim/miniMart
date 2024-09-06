@@ -12,16 +12,26 @@ import Header from '../Header'
 import { useFilterContax } from '../FilterContax'
 import Loding from '../Loding'
 import Footer from '../Footer'
+import Test from '../Test'
+
+
 
 
 function Home() {
   const{feature,latest,bestSeller,bestSellerProduct}=useProductContax()
-  const{loading}=useFilterContax()
+  const{loading,homeLoading}=useFilterContax()
 
-
+if(loading){
+  return(
+    <Loding/>
+  )
+}
   return (
     <>
-      {loading?<Loding/>:<div>
+
+
+      {homeLoading ?<Loding/>:<div>
+      <Header/>
         <HeroSection/>
         <HeroSectionContentPart/>
         <FeatureTitle/>
@@ -31,7 +41,12 @@ function Home() {
        {bestSeller && <BestSellerProduct/>}
        <SlickCarousel miniproduct={bestSellerProduct}/>
        <ProductList/>
-      </div>}
+       <Footer/>
+
+       </div>}
+
+
+
     </>
   )
 }

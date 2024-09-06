@@ -237,6 +237,8 @@ if(action.type==="HOME"){
         pages:false,
     }
 }
+
+
 if(action.type==="ABOUT"){
     return{
         ...state,
@@ -248,6 +250,7 @@ if(action.type==="ABOUT"){
         pages:false,
     }
 }
+
 if(action.type==="CONTACT"){
     return{
         ...state,
@@ -259,6 +262,9 @@ if(action.type==="CONTACT"){
         pages:false,
     }
 }
+
+
+
 if(action.type==="BLOG"){
     return{
         ...state,
@@ -270,6 +276,8 @@ if(action.type==="BLOG"){
         pages:false,
     }
 }
+
+
 if(action.type==="PRODUCTS"){
     return{
         ...state,
@@ -281,6 +289,8 @@ if(action.type==="PRODUCTS"){
         pages:false,
     }
 }
+
+
 if(action.type==="PAGES"){
     return{
         ...state,
@@ -319,7 +329,8 @@ if(action.type ==="SAGETIONS"){
     return{
         ...state,
         searchProduct:searchTemp,
-        sagetionList:e
+        sagetionList:e,
+        searchBoxValue:false
 
     }
 }
@@ -329,6 +340,101 @@ if(action.type ==="REMOVE_SAGETION"){
         ...state,
         searchingSagetion:[],
     }
+}
+
+if(action.type ==="PROFILE"){
+
+    return{
+        ...state,
+        Profile:true,
+        Manage:false,
+        Password:false,
+        ProfileWish:false,
+        ManageAc:false,
+        profileinfo:false
+
+
+    }
+}
+if(action.type === "MANAGE"){
+
+    return{
+        ...state,
+        Profile:false,
+        Manage:true,
+        Password:false,
+        ProfileWish:false,
+        ManageAc:false,
+        profileinfo:false
+
+    }
+}
+if(action.type ==="PASSWORD"){
+
+    return{
+        ...state,
+        Profile:false,
+        ManageAc:false,
+       ProfileWish:false,
+       Manage:false,
+        Password:true
+
+    }
+}
+
+if(action.type ==="PROFILE_INFO"){
+
+    return{
+        ...state,
+        Profile:false,
+        Manage:false,
+        Password:false,
+        ProfileWishe:false,
+        ManageAc:false,
+        profileinfo:true
+
+    }
+}
+
+if(action.type ==="WISH_PROFILE"){
+
+    return{
+        ...state,
+        Profile:false,
+        Manage:false,
+        Password:false,
+        profileinfo:false,
+        ManageAc:false,
+        ProfileWish:true
+
+    }
+}
+
+if(action.type ==="MANAGEACCOUNT"   ){
+
+    return{ 
+        ...state,
+        Profile:false,
+        Manage:false,
+        Password:false,
+        profileinfo:false,
+        ProfileWish:false,
+        ManageAc:true,
+
+    }
+}
+
+if(action.type === "END_ABOUT"){
+    return{
+        ...state,
+        home:false,
+        about:false,
+        contact:false,
+        product:false,
+        blog:false,
+        pages:false,
+    }
+
 }
 
 

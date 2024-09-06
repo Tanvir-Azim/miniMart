@@ -81,7 +81,7 @@ const Wraper = styled.section`
 `
 
   return (
-    <div className=' w-full h-full grid grid-cols-1 grid-rows-[2fr,2fr,1fr,1fr]'>
+    <div className=' w-full h-full lg:w-[240px] grid grid-cols-1 grid-rows-[2fr,2fr,1fr,1fr]'>
       <div className='  border-b border-gray-300'>
         <div className='w-full'>
             <div className=' w-[90%] mx-auto h-10  flex items-center'>

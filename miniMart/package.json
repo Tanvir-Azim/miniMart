@@ -1,5 +1,6 @@
 {
   "name": "minimart",
+  "homepage": "https://Tanvir-Azim.github.io/my-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^1.7.2",
+    "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-loading-skeleton": "^3.4.0",

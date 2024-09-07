@@ -38,7 +38,7 @@ function App() {
     <>
        <BrowserRouter>
        
-        <Routes>
+        <Routes basename='/miniMar'>
         <Route path="/" element={<Home/>}/>
         <Route path="/product" element={<Product />}/>
         <Route path="/blog" element={<Blog/>}/>

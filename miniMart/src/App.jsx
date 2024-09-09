@@ -1,7 +1,6 @@
 import React from "react"
 import Home from "./Components/HomePages/Home"
 //import Product from '../src/components/productPages/Product'
-
 import About from "./About"
 import Pages from "./Components/Pages/Pages"
 import Blog from "./Components/Blog/Blog"

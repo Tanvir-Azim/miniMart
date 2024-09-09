@@ -36,9 +36,8 @@ function App() {
 
   return (
     <>
-       <BrowserRouter>
-       
-        <Routes basename='/miniMar'>
+       <BrowserRouter> 
+        <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/product" element={<Product />}/>
         <Route path="/blog" element={<Blog/>}/>
